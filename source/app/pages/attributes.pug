@@ -1,0 +1,8 @@
+
+.values
+    each val in attributes
+        +numberInput(val)
+        +rollButton(val)
+
+.rolls 
+    +createRollSet("probe", attributes)

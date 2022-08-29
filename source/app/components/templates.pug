@@ -1,0 +1,70 @@
+- const buttonName = name => name.replace(/ /g, '-');
+- const attrName = name => name.replace(/ /g, '_');
+- const removeSpace = name => name.replace(/ /g, '');
+- const toLowerCase = name => name.toLowerCase();
+
+
+mixin textInput(name)
+    label(title=`enter ${name}`)
+        input(name=`attr_${attrName(name)}` placeholder=name title=`@{${attrName(name)}}` type='text' value='0')
+
+mixin numberInput(name)
+    label(title=`enter ${name}`)=name
+        input(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]')
+
+mixin checkboxInput(name)
+    label.styled-checkbox.grid(title=`enter ${name}`)
+        input(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='checkbox' value=name)
+        span.pictos 3
+
+mixin checkboxSymbol(name, symbol)
+    input.toggles.text-center(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='checkbox' value=name)
+    span.toggles.text-center.pictos #{symbol}
+
+mixin textarea(name)
+    textarea(name=`attr_${attrName(name)}` placeholder=name)
+
+mixin rollButtonDefault(name)
+    button.text-capitalize(name=`roll_${buttonName(name)}` type='roll' value!=`&{template:rolls} {{header=${name}}} {{dice=[[1d8]]}}`)
+
+mixin rollButton(name, roll)
+    button.text-capitalize(name=`roll_${buttonName(name)}` type='roll' value!=roll)
+
+mixin actionButton(name)
+    button.text-capitalize(name=`action_${buttonName(name)}` type='action')
+
+mixin repeatingRollButton(name)
+    button.text-left.ellipsis.font-weight-bold(name=`roll_${buttonName(name)}` type='roll' value!=`&{template:rolls} {{header=@{${name}}}} {{dice=@{description}}}`)
+        span(name='attr_name')
+
+mixin repeatingText(name)
+    fieldset(class=`repeating_${buttonName(name)}`)
+        .rowx.grid.descriptor
+            +repeatingRollButton(name)
+            +checkboxSymbol('collapse', 'i')
+            +checkboxSymbol('settings', 'p')
+            .rowx.collapse
+                span.collapse.description(name='attr_description')
+            .rowx.settings
+                +textInput(`name`)
+                +textarea('description')
+
+//-
+//-
+//-
+
+mixin createRollSet(name, list)
+    each attr in list
+        label(for=`roll_${attr}`)=attr
+        input(name=`attr_roll_${attrName(attr)}` id=`roll_${attr}` type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]')
+    +actionButton(name)
+
+mixin createTabDefault(name)
+    +createTab(name, "defaultTab")
+        block
+
+mixin createTab(name, cat)
+    input(name=`attr_${attrName(cat)}` id=name type='radio')
+    label(for=name)= name
+    .tab
+        block

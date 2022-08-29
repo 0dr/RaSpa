@@ -1,0 +1,75 @@
+.main-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-body input[type="radio"] {
+  display: none;
+}
+.main-body label {
+  width: max-content;
+  font-weight: bold;
+  background: #e2e2e2;
+  padding: 15px;
+}
+.main-body .tab {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  order: 1;
+  display: none;
+}
+.main-body input[type='radio']:checked + label + .tab {
+  display: block;
+}
+.main-body input[type='radio']:checked + label {
+  background: #ccc;
+}
+.values {
+  display: flex;
+}
+.rolls {
+  padding: 20px;
+  display: flex;
+}
+input {
+  color: #777;
+  width: 2em;
+  font-size: 2em;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  padding: 5px;
+  padding-left: 10px;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  cursor: pointer;
+  display: block;
+  width: 10px;
+  text-align: center;
+  position: relative;
+  background: transparent;
+}
+input[type=number]::-webkit-inner-spin-button::before,
+input[type=number]::-webkit-inner-spin-button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid #777;
+}
+input[type=number]::-webkit-inner-spin-button::before {
+  top: 7px;
+}
+input[type=number]::-webkit-inner-spin-button::after {
+  bottom: 7px;
+  transform: rotate(180deg);
+}
+.component {
+  display: block;
+}
+.sheet-rolltemplate-sheetname {
+  display: block;
+}
