@@ -12,45 +12,45 @@
   <label for="Attribute">Attribute</label>
   <div class="tab">
     <div class="values">
-      <label title="enter Ausdauer">Ausdauer
-        <input name="attr_Ausdauer" title="@{Ausdauer}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <label title="enter AuD">AuD
+        <input name="attr_AuD" title="@{AuD}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
       </label>
-      <button class="text-capitalize" name="roll_Ausdauer" type="roll" value="&{template:rolls} {{header=Ausdauer}} {{dice=[[1d8]]}}"></button>
-      <label title="enter Gewandtheit">Gewandtheit
-        <input name="attr_Gewandtheit" title="@{Gewandtheit}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <button class="text-capitalize" name="roll_AuD" type="roll" value="&{template:default} {{header=AuD}} {{Qualität = [[@{AuD}]] [[1d8<@{AuD}f8-1]]}}"></button>
+      <label title="enter GeH">GeH
+        <input name="attr_GeH" title="@{GeH}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
       </label>
-      <button class="text-capitalize" name="roll_Gewandtheit" type="roll" value="&{template:rolls} {{header=Gewandtheit}} {{dice=[[1d8]]}}"></button>
-      <label title="enter Muskelkraft">Muskelkraft
-        <input name="attr_Muskelkraft" title="@{Muskelkraft}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <button class="text-capitalize" name="roll_GeH" type="roll" value="&{template:default} {{header=GeH}} {{Qualität = [[@{GeH}]] [[1d8<@{GeH}f8-1]]}}"></button>
+      <label title="enter MuK">MuK
+        <input name="attr_MuK" title="@{MuK}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
       </label>
-      <button class="text-capitalize" name="roll_Muskelkraft" type="roll" value="&{template:rolls} {{header=Muskelkraft}} {{dice=[[1d8]]}}"></button>
-      <label title="enter Rationalität">Rationalität
-        <input name="attr_Rationalität" title="@{Rationalität}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <button class="text-capitalize" name="roll_MuK" type="roll" value="&{template:default} {{header=MuK}} {{Qualität = [[@{MuK}]] [[1d8<@{MuK}f8-1]]}}"></button>
+      <label title="enter RaT">RaT
+        <input name="attr_RaT" title="@{RaT}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
       </label>
-      <button class="text-capitalize" name="roll_Rationalität" type="roll" value="&{template:rolls} {{header=Rationalität}} {{dice=[[1d8]]}}"></button>
-      <label title="enter Kreativität">Kreativität
-        <input name="attr_Kreativität" title="@{Kreativität}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <button class="text-capitalize" name="roll_RaT" type="roll" value="&{template:default} {{header=RaT}} {{Qualität = [[@{RaT}]] [[1d8<@{RaT}f8-1]]}}"></button>
+      <label title="enter KrT">KrT
+        <input name="attr_KrT" title="@{KrT}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
       </label>
-      <button class="text-capitalize" name="roll_Kreativität" type="roll" value="&{template:rolls} {{header=Kreativität}} {{dice=[[1d8]]}}"></button>
-      <label title="enter Willenskraft">Willenskraft
-        <input name="attr_Willenskraft" title="@{Willenskraft}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <button class="text-capitalize" name="roll_KrT" type="roll" value="&{template:default} {{header=KrT}} {{Qualität = [[@{KrT}]] [[1d8<@{KrT}f8-1]]}}"></button>
+      <label title="enter WiK">WiK
+        <input name="attr_WiK" title="@{WiK}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
       </label>
-      <button class="text-capitalize" name="roll_Willenskraft" type="roll" value="&{template:rolls} {{header=Willenskraft}} {{dice=[[1d8]]}}"></button>
+      <button class="text-capitalize" name="roll_WiK" type="roll" value="&{template:default} {{header=WiK}} {{Qualität = [[@{WiK}]] [[1d8<@{WiK}f8-1]]}}"></button>
     </div>
     <div class="rolls"> 
-      <label for="roll_Ausdauer">Ausdauer</label>
-      <input name="attr_roll_Ausdauer" id="roll_Ausdauer" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <label for="roll_Gewandtheit">Gewandtheit</label>
-      <input name="attr_roll_Gewandtheit" id="roll_Gewandtheit" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <label for="roll_Muskelkraft">Muskelkraft</label>
-      <input name="attr_roll_Muskelkraft" id="roll_Muskelkraft" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <label for="roll_Rationalität">Rationalität</label>
-      <input name="attr_roll_Rationalität" id="roll_Rationalität" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <label for="roll_Kreativität">Kreativität</label>
-      <input name="attr_roll_Kreativität" id="roll_Kreativität" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <label for="roll_Willenskraft">Willenskraft</label>
-      <input name="attr_roll_Willenskraft" id="roll_Willenskraft" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <button class="text-capitalize" name="roll_probe" type="roll" value="&{template:rolls} {{header=probe}} {{dice=[[1d8]]}}"></button>
+      <label for="roll_AuD">AuD</label>
+      <input name="attr_roll_AuD" id="roll_AuD" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <label for="roll_GeH">GeH</label>
+      <input name="attr_roll_GeH" id="roll_GeH" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <label for="roll_MuK">MuK</label>
+      <input name="attr_roll_MuK" id="roll_MuK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <label for="roll_RaT">RaT</label>
+      <input name="attr_roll_RaT" id="roll_RaT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <label for="roll_KrT">KrT</label>
+      <input name="attr_roll_KrT" id="roll_KrT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <label for="roll_WiK">WiK</label>
+      <input name="attr_roll_WiK" id="roll_WiK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <button class="text-capitalize" name="act_probe" type="action"></button>
     </div>
   </div>
   <input name="attr_defaultTab" id="Eigenschaften" type="radio"/>
@@ -96,7 +96,7 @@
     </div>
   </div>
 </rolltemplate>
-<rolltemplate class="sheet-rolltemplate-attribute">
+<rolltemplate class="sheet-rolltemplate-attributes">
   <div class="sheet-template-container">
     <div class="sheet-template-header">{{#header}} <b>{{header}}</b>{{/header}}</div>
     <div class="sheet-template-body">{{#aud}}
@@ -220,4 +220,27 @@ function getSingleAttrAsync(prop){
     );
   });
 });
+
+
+on('clicked:probe', (info) => {
+    groupRoll(["AuD", "GeH", "MuK", "RaT", "KrT", "WiK"]);
+});
+async function groupRoll(group_) {
+    const rollHeader = "&{template:default} ";
+    var rollString = "";
+    //var attributes = await getAttrsAsync(group_);
+    var attributeRollcounts =  await getAttrsAsync(group_.map((line) => `roll_${line}`));
+    for (index in group_) {
+        var attrName = group_[index];
+        var attrCountName = Object.keys(attributeRollcounts)[index];
+        var attrCount =attributeRollcounts[attrCountName];
+        if (attrCount > 0) {
+            rollString += ` {{${attrName}=[[@{${attrCountName}}d8<@{${attrName}}f8-@{${attrCountName}}]]}}`;
+        } 
+    }
+    startRoll(rollHeader + rollString, (results) => {finishRoll(results.rollId)});
+}
+
+// [[10d8<4f8 -10]]
+// `A ${wutt}, lol`
 </script>

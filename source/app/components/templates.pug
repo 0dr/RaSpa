@@ -27,11 +27,11 @@ mixin textarea(name)
 mixin rollButtonDefault(name)
     button.text-capitalize(name=`roll_${buttonName(name)}` type='roll' value!=`&{template:rolls} {{header=${name}}} {{dice=[[1d8]]}}`)
 
-mixin rollButton(name, roll)
-    button.text-capitalize(name=`roll_${buttonName(name)}` type='roll' value!=roll)
+mixin rollButton(name)
+    button.text-capitalize(name=`roll_${buttonName(name)}` type='roll' value!=`&{template:default} {{header=${name}}} {{Qualität = [[@{${attrName(name)}}]] [[1d8<@{${attrName(name)}}f8-1]]}}`)
 
 mixin actionButton(name)
-    button.text-capitalize(name=`action_${buttonName(name)}` type='action')
+    button.text-capitalize(name=`act_${buttonName(name)}` type='action')
 
 mixin repeatingRollButton(name)
     button.text-left.ellipsis.font-weight-bold(name=`roll_${buttonName(name)}` type='roll' value!=`&{template:rolls} {{header=@{${name}}}} {{dice=@{description}}}`)

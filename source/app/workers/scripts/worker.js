@@ -11,3 +11,8 @@ on('', (info) => {
     );
   });
 });
+
+
+on('clicked:probe', (info) => {
+    groupRoll(["AuD", "GeH", "MuK", "RaT", "KrT", "WiK"]);
+});
