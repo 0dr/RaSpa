@@ -28,7 +28,7 @@ mixin rollButtonDefault(name)
     button.text-capitalize(name=`roll_${buttonName(name)}` type='roll' value!=`&{template:rolls} {{header=${name}}} {{dice=[[1d8]]}}`)
 
 mixin rollButton(name)
-    button.text-capitalize(name=`roll_${buttonName(name)}` type='roll' value!=`&{template:default} {{header=${name}}} {{Qualität = [[@{${attrName(name)}}]] [[1d8<@{${attrName(name)}}f8-1]]}}`)
+    button.text-capitalize(name=`roll_${buttonName(name)}` type='roll' value!=`&{template:default} {{Attribut: ${name}}} {{Qualität: [[[[@{${attrName(name)}}]] + [[1d8<@{${attrName(name)}}f8-1]]]] }} {{Wurf: $[[1]]}} }}`)
 
 mixin actionButton(name)
     button.text-capitalize(name=`act_${buttonName(name)}` type='action')

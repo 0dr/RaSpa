@@ -1,6 +1,6 @@
 
 async function groupRoll(group_) {
-    const rollHeader = "&{template:default} ";
+    const rollHeader = "&{template:test}";
     var rollString = "";
     //var attributes = await getAttrsAsync(group_);
     var attributeRollcounts =  await getAttrsAsync(group_.map((line) => `roll_${line}`));
@@ -12,8 +12,13 @@ async function groupRoll(group_) {
             rollString += ` {{${attrName}=[[@{${attrCountName}}d8<@{${attrName}}f8-@{${attrCountName}}]]}}`;
         } 
     }
-    startRoll(rollHeader + rollString, (results) => {finishRoll(results.rollId)});
+    rollString += ` {{qualität=[[0]]}}`;
+    startRoll(rollHeader + rollString, (retnObject) => {
+        var outcome = 0;
+        for(partialRollData of Object.entries(retnObject.results)) {
+            outcome += partialRollData[1].result;
+        }
+        finishRoll(retnObject.rollId, {"qualität": outcome});
+    });
 }
 
-// [[10d8<4f8 -10]]
-// `A ${wutt}, lol`

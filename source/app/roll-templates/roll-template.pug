@@ -23,8 +23,11 @@ rolltemplate.sheet-rolltemplate-test
     .sheet-template-container
         h1 {{name}}
         .sheet-results
-            h4 Result = {{roll1}}
-            h4 Custom Result = {{computed::roll1}}
+            | {{#allprops() qualität}}
+            .result 
+                p {{key}} = {{value}}
+            | {{/allprops() qualität}}
+            | Qualität = {{computed::qualität}}
 
 //- - const attributes = ["Ausdauer", "Gewandtheit", "Muskelkraft", "Rationalität", "Kreativität", "Willenskraft"]
 rolltemplate.sheet-rolltemplate-attributes
