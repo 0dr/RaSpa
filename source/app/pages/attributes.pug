@@ -1,8 +1,10 @@
 
 .values
     each val in attributesShort
-        +numberInput(val)
-        +rollButton(val)
+        +numberInputRollable(val)
 
 .rolls 
-    +createRollSet("probe", attributesShort)
+    .ability
+        +abilitySelect("probeAbility")
+    .probe
+        +createRollSet("probe", attributesShort)

@@ -21,13 +21,13 @@ rolltemplate.sheet-rolltemplate-rolls
 
 rolltemplate.sheet-rolltemplate-test 
     .sheet-template-container
-        h1 {{name}}
+        h3 {{name}}
         .sheet-results
-            | {{#allprops() qualität}}
-            .result 
-                p {{key}} = {{value}}
-            | {{/allprops() qualität}}
-            | Qualität = {{computed::qualität}}
+            | {{#allprops() qualität Fähigkeit}}
+            b {{key}} </br> {{value}}
+            | {{/allprops() qualität Fähigkeit}}
+        .sheet-fooder
+            b Qualität = {{computed::qualität}}
 
 //- - const attributes = ["Ausdauer", "Gewandtheit", "Muskelkraft", "Rationalität", "Kreativität", "Willenskraft"]
 rolltemplate.sheet-rolltemplate-attributes

@@ -3,76 +3,219 @@
   <input name="attr_defaultTab" id="Übersicht" type="radio"/>
   <label for="Übersicht">Übersicht</label>
   <div class="tab">
-    <div class="component"></div>
-    <p>loedjöfhdölsfg ghöf öshfjgöfs jghfjsg ljdfghl dfalgdf ghadfjghadfl gkdhaflgh dflaghdlafg had#</p>
-    <p>dfjhgkljdfsg ödfgödf hjgdfag öjdfagödfag öfagö göfdhgöjadf gg p dföghdsg </p>
-    <p>435897ß3457ß078ß0457ß8 pughpsh gdfsh</p>
+    <div class="about_main">
+      <label title="Name">Name
+        <input name="attr_Name" placeholder="Name" title="@{Name}" type="text" value=""/>
+      </label>
+      <label title="Rasse">Rasse
+        <input name="attr_Rasse" placeholder="Rasse" title="@{Rasse}" type="text" value=""/>
+      </label>
+      <label title="Alter">Alter
+        <input name="attr_Alter" placeholder="Alter" title="@{Alter}" type="text" value=""/>
+      </label>
+      <label title="Größe">Größe
+        <input name="attr_Größe" placeholder="Größe" title="@{Größe}" type="text" value=""/>
+      </label>
+      <label title="Gewicht">Gewicht
+        <input name="attr_Gewicht" placeholder="Gewicht" title="@{Gewicht}" type="text" value=""/>
+      </label>
+    </div>
+    <div class="about_details">
+      <div class="area">
+        <label>Aussehen</label>
+        <textarea name="attr_Aussehen" placeholder="Aussehen"></textarea>
+      </div>
+    </div>
   </div>
   <input name="attr_defaultTab" id="Attribute" type="radio"/>
   <label for="Attribute">Attribute</label>
   <div class="tab">
     <div class="values">
-      <label title="enter AuD">AuD
-        <input name="attr_AuD" title="@{AuD}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      </label>
-      <button class="text-capitalize" name="roll_AuD" type="roll" value="&{template:default} {{header=AuD}} {{Qualität = [[@{AuD}]] [[1d8<@{AuD}f8-1]]}}"></button>
-      <label title="enter GeH">GeH
-        <input name="attr_GeH" title="@{GeH}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      </label>
-      <button class="text-capitalize" name="roll_GeH" type="roll" value="&{template:default} {{header=GeH}} {{Qualität = [[@{GeH}]] [[1d8<@{GeH}f8-1]]}}"></button>
-      <label title="enter MuK">MuK
-        <input name="attr_MuK" title="@{MuK}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      </label>
-      <button class="text-capitalize" name="roll_MuK" type="roll" value="&{template:default} {{header=MuK}} {{Qualität = [[@{MuK}]] [[1d8<@{MuK}f8-1]]}}"></button>
-      <label title="enter RaT">RaT
-        <input name="attr_RaT" title="@{RaT}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      </label>
-      <button class="text-capitalize" name="roll_RaT" type="roll" value="&{template:default} {{header=RaT}} {{Qualität = [[@{RaT}]] [[1d8<@{RaT}f8-1]]}}"></button>
-      <label title="enter KrT">KrT
-        <input name="attr_KrT" title="@{KrT}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      </label>
-      <button class="text-capitalize" name="roll_KrT" type="roll" value="&{template:default} {{header=KrT}} {{Qualität = [[@{KrT}]] [[1d8<@{KrT}f8-1]]}}"></button>
-      <label title="enter WiK">WiK
-        <input name="attr_WiK" title="@{WiK}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      </label>
-      <button class="text-capitalize" name="roll_WiK" type="roll" value="&{template:default} {{header=WiK}} {{Qualität = [[@{WiK}]] [[1d8<@{WiK}f8-1]]}}"></button>
+      <div class="name"></div>
+      <button class="text-capitalize" name="roll_AuD" type="roll" value="&{template:default} {{Attribut: AuD}} {{Qualität: [[[[@{AuD}]] + [[1d8<@{AuD}f8-1]]]] }} {{Wurf: $[[1]]}} }}">AuD</button>
+      <input name="attr_AuD" title="@{AuD}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <div class="name"></div>
+      <button class="text-capitalize" name="roll_GeH" type="roll" value="&{template:default} {{Attribut: GeH}} {{Qualität: [[[[@{GeH}]] + [[1d8<@{GeH}f8-1]]]] }} {{Wurf: $[[1]]}} }}">GeH</button>
+      <input name="attr_GeH" title="@{GeH}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <div class="name"></div>
+      <button class="text-capitalize" name="roll_MuK" type="roll" value="&{template:default} {{Attribut: MuK}} {{Qualität: [[[[@{MuK}]] + [[1d8<@{MuK}f8-1]]]] }} {{Wurf: $[[1]]}} }}">MuK</button>
+      <input name="attr_MuK" title="@{MuK}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <div class="name"></div>
+      <button class="text-capitalize" name="roll_RaT" type="roll" value="&{template:default} {{Attribut: RaT}} {{Qualität: [[[[@{RaT}]] + [[1d8<@{RaT}f8-1]]]] }} {{Wurf: $[[1]]}} }}">RaT</button>
+      <input name="attr_RaT" title="@{RaT}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <div class="name"></div>
+      <button class="text-capitalize" name="roll_KrT" type="roll" value="&{template:default} {{Attribut: KrT}} {{Qualität: [[[[@{KrT}]] + [[1d8<@{KrT}f8-1]]]] }} {{Wurf: $[[1]]}} }}">KrT</button>
+      <input name="attr_KrT" title="@{KrT}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <div class="name"></div>
+      <button class="text-capitalize" name="roll_WiK" type="roll" value="&{template:default} {{Attribut: WiK}} {{Qualität: [[[[@{WiK}]] + [[1d8<@{WiK}f8-1]]]] }} {{Wurf: $[[1]]}} }}">WiK</button>
+      <input name="attr_WiK" title="@{WiK}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
     </div>
     <div class="rolls"> 
-      <label for="roll_AuD">AuD</label>
-      <input name="attr_roll_AuD" id="roll_AuD" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <label for="roll_GeH">GeH</label>
-      <input name="attr_roll_GeH" id="roll_GeH" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <label for="roll_MuK">MuK</label>
-      <input name="attr_roll_MuK" id="roll_MuK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <label for="roll_RaT">RaT</label>
-      <input name="attr_roll_RaT" id="roll_RaT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <label for="roll_KrT">KrT</label>
-      <input name="attr_roll_KrT" id="roll_KrT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <label for="roll_WiK">WiK</label>
-      <input name="attr_roll_WiK" id="roll_WiK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <button class="text-capitalize" name="act_probe" type="action"></button>
+      <div class="ability">
+        <select name="attr_probeAbility">
+          <option value="Balancieren">Balancieren</option>
+          <option value="Bewaffneter Kampf">Bewaffneter Kampf</option>
+          <option value="Bogenschießen">Bogenschießen</option>
+          <option value="Fliegen">Fliegen</option>
+          <option value="Leichtathletik">Leichtathletik</option>
+          <option value="Messerwerfen">Messerwerfen</option>
+          <option value="Schleudern">Schleudern</option>
+          <option value="Schwerathletik">Schwerathletik</option>
+          <option value="Schwimmen">Schwimmen</option>
+          <option value="Speerwerfen">Speerwerfen</option>
+          <option value="Turnen">Turnen</option>
+          <option value="Unbewaffneter Kampf">Unbewaffneter Kampf</option>
+          <option value="Werfen">Werfen</option>
+          <option value="Artillerie">Artillerie</option>
+          <option value="Erste Hilfe">Erste Hilfe</option>
+          <option value="Gießen">Gießen</option>
+          <option value="Handgeführte Werkzeuge">Handgeführte Werkzeuge</option>
+          <option value="Handgeführte Maschinen">Handgeführte Maschinen</option>
+          <option value="Löten &amp; Schweißen">Löten &amp; Schweißen</option>
+          <option value="Schusswaffen">Schusswaffen</option>
+          <option value="Manuelle Maschinen">Manuelle Maschinen</option>
+          <option value="Biologie">Biologie</option>
+          <option value="Chemie">Chemie</option>
+          <option value="Physik">Physik</option>
+          <option value="Psychologie">Psychologie</option>
+          <option value="Gedächtnis">Gedächtnis</option>
+          <option value="Geschichte">Geschichte</option>
+          <option value="Materialkunden">Materialkunden</option>
+          <option value="Rechnen">Rechnen</option>
+          <option value="Schrift">Schrift</option>
+          <option value="Selbstbeherrschung">Selbstbeherrschung</option>
+          <option value="Sprache">Sprache</option>
+          <option value="Technologie">Technologie</option>
+          <option value="Wahrnehmung">Wahrnehmung</option>
+          <option value="Auftreten">Auftreten</option>
+          <option value="Durchschauen">Durchschauen</option>
+          <option value="Normen">Normen</option>
+          <option value="Redekunst">Redekunst</option>
+        </select>
+      </div>
+      <div class="probe">
+        <label for="roll_AuD">AuD</label>
+        <input name="attr_roll_AuD" id="roll_AuD" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <label for="roll_GeH">GeH</label>
+        <input name="attr_roll_GeH" id="roll_GeH" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <label for="roll_MuK">MuK</label>
+        <input name="attr_roll_MuK" id="roll_MuK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <label for="roll_RaT">RaT</label>
+        <input name="attr_roll_RaT" id="roll_RaT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <label for="roll_KrT">KrT</label>
+        <input name="attr_roll_KrT" id="roll_KrT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <label for="roll_WiK">WiK</label>
+        <input name="attr_roll_WiK" id="roll_WiK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <button class="text-capitalize" name="act_probe" type="action">probe</button>
+      </div>
     </div>
   </div>
   <input name="attr_defaultTab" id="Eigenschaften" type="radio"/>
   <label for="Eigenschaften">Eigenschaften</label>
   <div class="tab">
-    <p>test 2</p>
-    <p>93405ß91345j25g7h24gß7gohljghdflskgög gfgkjg ögöja ghöjadfg hjafg öjdfagödfag</p>
-    <p>34905b3ßk nmmhuif89ßn78ß45  ßjbg2458ßj62j6</p>
+    <h4>Eigenschaften</h4>
+    <div class="positive"> 
+      <h6>Positive</h6>
+      <fieldset class="repeating_Eigenschaften-Pos">
+        <div class="rowx grid descriptor">
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" value=""/>
+        </div>
+      </fieldset>
+    </div>
+    <div class="negative">
+      <h6>Negative</h6>
+      <fieldset class="repeating_Eigenschaften-Neg">
+        <div class="rowx grid descriptor">
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" value=""/>
+        </div>
+      </fieldset>
+    </div>
   </div>
   <input name="attr_defaultTab" id="Fertigkeiten" type="radio"/>
   <label for="Fertigkeiten">Fertigkeiten</label>
   <div class="tab">
-    <p>test 2</p>
-    <p>93405ß91345j25g7h24gß7gohljghdflskgög gfgkjg ögöja ghöjadfg hjafg öjdfagödfag</p>
-    <p>34905b3ßk nmmhuif89ßn78ß45  ßjbg2458ßj62j6</p>
+    <div class="passive">
+      <h4>Fertigkeiten</h4>
+      <fieldset class="repeating_Fähigkeiten">
+        <div class="rowx grid descriptor">
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" value=""/>
+        </div>
+      </fieldset>
+    </div>
+    <div class="active">
+      <h4>Fähigkeiten</h4>
+      <fieldset class="repeating_Fertigkeiten">
+        <div class="rowx grid descriptor">
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" value=""/>
+          <input name="attr_quality" title="@{quality}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+          <button class="text-left ellipsis font-weight-bold" name="roll_Fertigkeiten" type="roll" value=""><span name="attr_name"></span></button>
+        </div>
+      </fieldset>
+    </div>
   </div>
   <input name="attr_defaultTab" id="Ressourcen" type="radio"/>
   <label for="Ressourcen">Ressourcen</label>
   <div class="tab">
-    <p>test 2</p>
-    <p>93405ß91345j25g7h24gß7gohljghdflskgög gfgkjg ögöja ghöjadfg hjafg öjdfagödfag</p>
-    <p>34905b3ßk nmmhuif89ßn78ß45  ßjbg2458ßj62j6</p>
+    <div class="schulden"> 
+      <h2>Schulden</h2>
+      <fieldset class="repeating_Schulden">
+        <div class="rowx grid descriptor">
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" value=""/>
+        </div>
+      </fieldset>
+    </div>
+    <div class="feinde"> 
+      <h2>Feinde</h2>
+      <fieldset class="repeating_Feinde">
+        <div class="rowx grid descriptor">
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" value=""/>
+        </div>
+      </fieldset>
+    </div>
+    <div class="verbindungen"> 
+      <h2>Verbindungen</h2>
+      <fieldset class="repeating_Verbindungen">
+        <div class="rowx grid descriptor">
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" value=""/>
+        </div>
+      </fieldset>
+    </div>
+    <div class="ruf">
+      <h2>Ruf</h2>
+      <fieldset class="repeating_Ruf">
+        <div class="rowx grid descriptor">
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" value=""/>
+        </div>
+      </fieldset>
+    </div>
+    <div class="stand">
+      <h2>Stand</h2>
+      <select name="Stand">
+        <option value="-3">Mittellose</option>
+        <option value="-2">Vagabund</option>
+        <option value="-1">Unterschicht</option>
+        <option value="0">Mittelstand</option>
+        <option value="1">obere Mittelschicht</option>
+        <option value="2">Oberschicht</option>
+      </select>
+    </div>
+    <div class="besitz"> 
+      <h2>Besitz</h2>
+      <fieldset class="repeating_Besitz">
+        <div class="rowx grid descriptor">
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" value=""/>
+        </div>
+      </fieldset>
+    </div>
   </div>
 </div>
 <rolltemplate class="sheet-rolltemplate-rolls">
@@ -89,11 +232,9 @@
 </rolltemplate>
 <rolltemplate class="sheet-rolltemplate-test"> 
   <div class="sheet-template-container">
-    <h1>{{name}}</h1>
-    <div class="sheet-results">
-      <h4>Result = {{roll1}}</h4>
-      <h4>Custom Result = {{computed::roll1}}</h4>
-    </div>
+    <h3>{{name}}</h3>
+    <div class="sheet-results">{{#allprops() qualität Fähigkeit}}<b>{{key}} </br> {{value}}</b>{{/allprops() qualität Fähigkeit}}</div>
+    <div class="sheet-fooder"><b>Qualität = {{computed::qualität}}</b></div>
   </div>
 </rolltemplate>
 <rolltemplate class="sheet-rolltemplate-attributes">
@@ -208,28 +349,44 @@ function getSingleAttrAsync(prop){
     });
 }
   on('', (info) => {
-  startRoll("&{template:test} {{name=Test}} {{roll1=[[1d8]]}}", (results) => {
-    const total = results.results.roll1.result
-    const computed = total % 4;
+    startRoll("&{template:test} {{name=Test}} {{roll1=[[1d8]]}}", (results) => {
+        const total = results.results.roll1.result
+        const computed = total % 4;
 
-    finishRoll(
-      results.rollId,
-      {
-        roll1: computed
-      }
-    );
-  });
+        finishRoll(
+            results.rollId,
+            {
+                roll1: computed
+            }
+        );
+    });
 });
 
+const raspa_abilities = {'Balancieren': {attributes: ['MuK', 'WiK']}, 'Bewaffneter Kampf': {attributes: ['MuK', 'WiK']}, 'Bogenschießen': {attributes: ['MuK', 'RaT']}, 'Fliegen': {attributes: ['MuK', 'AuD']}, 'Leichtathletik': {attributes: ['MuK', 'WiK']}, 'Messerwerfen': {attributes: ['MuK', 'RaT']}, 'Schleudern': {attributes: ['MuK', 'RaT']}, 'Schwerathletik': {attributes: ['MuK', 'RaT']}, 'Schwimmen': {attributes: ['MuK', 'AuD']}, 'Speerwerfen': {attributes: ['MuK', 'RaT']}, 'Turnen': {attributes: ['MuK', 'GeH']}, 'Unbewaffneter Kampf': {attributes: ['MuK', 'GeH']}, 'Werfen': {attributes: ['MuK', 'RaT']}, 'Artillerie': {attributes: ['RaT', 'WiK']}, 'Erste Hilfe': {attributes: ['RaT', 'WiK']}, 'Gießen': {attributes: ['RaT', 'KrT']}, 'Handgeführte Werkzeuge': {attributes: ['AuD', 'MuK']}, 'Handgeführte Maschinen': {attributes: ['AuD', 'MuK']}, 'Löten & Schweißen': {attributes: ['RaT', 'WiK']}, 'Schusswaffen': {attributes: ['MuK', 'WiK']}, 'Manuelle Maschinen': {attributes: ['RaT', 'KrT']}, 'Biologie': {attributes: ['RaT', 'KrT']}, 'Chemie': {attributes: ['RaT', 'KrT']}, 'Physik': {attributes: ['RaT', 'KrT']}, 'Psychologie': {attributes: ['KrT', 'WiK']}, 'Gedächtnis': {attributes: ['RaT', 'KrT']}, 'Geschichte': {attributes: ['RaT', 'KrT']}, 'Materialkunden': {attributes: ['RaT', 'WiK']}, 'Rechnen': {attributes: ['RaT', 'KrT']}, 'Schrift': {attributes: ['RaT', 'KrT']}, 'Selbstbeherrschung': {attributes: ['AuD', 'WiK']}, 'Sprache': {attributes: ['RaT', 'KrT']}, 'Technologie': {attributes: ['RaT', 'KrT']}, 'Wahrnehmung': {attributes: ['RaT', 'KrT']}, 'Auftreten': {attributes: ['KrT', 'WiK']}, 'Durchschauen': {attributes: ['RaT', 'KrT']}, 'Normen': {attributes: ['RaT', 'KrT']}, 'Redekunst': {attributes: ['RaT', 'KrT']}};
 
 on('clicked:probe', (info) => {
-    groupRoll(["AuD", "GeH", "MuK", "RaT", "KrT", "WiK"]);
+    groupRoll(['AuD', 'GeH', 'MuK', 'RaT', 'KrT', 'WiK']);
+});
+
+on('change:probeability', async (info) => {
+    console.log(info.newValue);
+    //reset grouproll 
+    var setObject = {roll_AuD: 0, roll_GeH: 0, roll_MuK: 0, roll_RaT: 0, roll_KrT: 0, roll_WiK: 0};
+    
+    for(entry of [raspa_abilities[info.newValue].attributes[0], raspa_abilities[info.newValue].attributes[1]]) {
+        setObject["roll_"+entry]=1;
+    }
+
+    setAttrsAsync(setObject);
+
 });
 async function groupRoll(group_) {
-    const rollHeader = "&{template:default} ";
+    const rollHeader = "&{template:test}";
     var rollString = "";
     //var attributes = await getAttrsAsync(group_);
+    var abilityName = await getAttrsAsync(["probeAbility"]);
     var attributeRollcounts =  await getAttrsAsync(group_.map((line) => `roll_${line}`));
+    rollString += ` {{name=${abilityName.probeAbility}}}`;
     for (index in group_) {
         var attrName = group_[index];
         var attrCountName = Object.keys(attributeRollcounts)[index];
@@ -238,9 +395,16 @@ async function groupRoll(group_) {
             rollString += ` {{${attrName}=[[@{${attrCountName}}d8<@{${attrName}}f8-@{${attrCountName}}]]}}`;
         } 
     }
-    startRoll(rollHeader + rollString, (results) => {finishRoll(results.rollId)});
+    rollString += ` {{qualität=[[0]]}}`;
+    startRoll(rollHeader + rollString, (retnObject) => {
+        var outcome = 0;
+        for(partialRollData of Object.entries(retnObject.results)) {
+            outcome += partialRollData[1].result;
+        }
+        finishRoll(retnObject.rollId, {"qualität": outcome});
+    });
 }
 
-// [[10d8<4f8 -10]]
-// `A ${wutt}, lol`
+
+
 </script>

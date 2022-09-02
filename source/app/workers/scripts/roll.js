@@ -3,7 +3,9 @@ async function groupRoll(group_) {
     const rollHeader = "&{template:test}";
     var rollString = "";
     //var attributes = await getAttrsAsync(group_);
+    var abilityName = await getAttrsAsync(["probeAbility"]);
     var attributeRollcounts =  await getAttrsAsync(group_.map((line) => `roll_${line}`));
+    rollString += ` {{name=${abilityName.probeAbility}}}`;
     for (index in group_) {
         var attrName = group_[index];
         var attrCountName = Object.keys(attributeRollcounts)[index];
@@ -21,4 +23,5 @@ async function groupRoll(group_) {
         finishRoll(retnObject.rollId, {"qualität": outcome});
     });
 }
+
 
