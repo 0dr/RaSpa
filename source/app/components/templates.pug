@@ -7,8 +7,8 @@ mixin textInputLabeled(name)
     label(title=`${name}`)=name
         input(name=`attr_${attrName(name)}` placeholder=name title=`@{${attrName(name)}}` type='text' value='')
 
-mixin textInput(name)
-    input(name=`attr_${attrName(name)}` placeholder=name title=`@{${attrName(name)}}` type='text' value='')
+mixin textInput(name, style="")
+    input(name=`attr_${attrName(name)}` placeholder=name title=`@{${attrName(name)}}` type='text' value='' style=style)
 
 mixin numberInput(name)
 
@@ -65,8 +65,8 @@ mixin repeatingTextRollable(name)
 mixin repeatingText(name)
     fieldset(class=`repeating_${buttonName(name)}`)
         .rowx.grid.descriptor
-                +textInput(`name`)
-                +textInput('description')
+                +textInput(`name`,`font-weight: bold`)
+                +textInput('description', `font-style: italic`)
 
 
 mixin dropDown(name, entrys=[])
