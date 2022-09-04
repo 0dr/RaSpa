@@ -3,9 +3,9 @@
 - const removeSpace = name => name.replace(/ /g, '');
 - const toLowerCase = name => name.toLowerCase();
 
-mixin textInputLabeled(name, state='false')
+mixin textInputLabeled(name)
     label(title=`${name}`)&attributes(attributes)=name
-        input(name=`attr_${attrName(name)}` placeholder=name title=`@{${attrName(name)}}` type='text' disabled=state value=``)&attributes(attributes)
+        input(name=`attr_${attrName(name)}` placeholder=name title=`@{${attrName(name)}}` type='text' value=``)&attributes(attributes)
 
 mixin hiddenVar(name)
     input(name=`attr_${attrName(name)}` type='hidden')&attributes(attributes)
@@ -16,9 +16,9 @@ mixin textInput(name, style="")
 mixin numberInput(name)
     input(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]')
 
-mixin numberInputLabeled(name, state='false')
+mixin numberInputLabeled(name)
     label(title=`enter ${name}`)=name
-        input(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]' disabled=state)
+        input(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]' )&attributes(attributes)
 
 mixin numberInputRollable(name)
     .name
