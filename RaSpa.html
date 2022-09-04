@@ -5,19 +5,19 @@
   <div class="tab">
     <div class="about_main">
       <label title="Name">Name
-        <input name="attr_Name" placeholder="Name" title="@{Name}" type="text" value=""/>
+        <input name="attr_Name" placeholder="Name" title="@{Name}" type="text" disabled="false" value=""/>
       </label>
       <label title="Rasse">Rasse
-        <input name="attr_Rasse" placeholder="Rasse" title="@{Rasse}" type="text" value=""/>
+        <input name="attr_Rasse" placeholder="Rasse" title="@{Rasse}" type="text" disabled="false" value=""/>
       </label>
       <label title="Alter">Alter
-        <input name="attr_Alter" placeholder="Alter" title="@{Alter}" type="text" value=""/>
+        <input name="attr_Alter" placeholder="Alter" title="@{Alter}" type="text" disabled="false" value=""/>
       </label>
       <label title="Größe">Größe
-        <input name="attr_Größe" placeholder="Größe" title="@{Größe}" type="text" value=""/>
+        <input name="attr_Größe" placeholder="Größe" title="@{Größe}" type="text" disabled="false" value=""/>
       </label>
       <label title="Gewicht">Gewicht
-        <input name="attr_Gewicht" placeholder="Gewicht" title="@{Gewicht}" type="text" value=""/>
+        <input name="attr_Gewicht" placeholder="Gewicht" title="@{Gewicht}" type="text" disabled="false" value=""/>
       </label>
     </div>
     <div class="about_details">
@@ -33,22 +33,22 @@
     <div class="values">
       <div class="name"></div>
       <button class="text-capitalize" name="roll_AuD" type="roll" value="&{template:default} {{Attribut: AuD}} {{Qualität: [[[[@{AuD}]] + [[1d8<@{AuD}f8-1]]]] }} {{Wurf: $[[1]]}} }}">AuD</button>
-      <input name="attr_AuD" title="@{AuD}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <input name="attr_AuD" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
       <div class="name"></div>
       <button class="text-capitalize" name="roll_GeH" type="roll" value="&{template:default} {{Attribut: GeH}} {{Qualität: [[[[@{GeH}]] + [[1d8<@{GeH}f8-1]]]] }} {{Wurf: $[[1]]}} }}">GeH</button>
-      <input name="attr_GeH" title="@{GeH}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <input name="attr_GeH" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
       <div class="name"></div>
       <button class="text-capitalize" name="roll_MuK" type="roll" value="&{template:default} {{Attribut: MuK}} {{Qualität: [[[[@{MuK}]] + [[1d8<@{MuK}f8-1]]]] }} {{Wurf: $[[1]]}} }}">MuK</button>
-      <input name="attr_MuK" title="@{MuK}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <input name="attr_MuK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
       <div class="name"></div>
       <button class="text-capitalize" name="roll_RaT" type="roll" value="&{template:default} {{Attribut: RaT}} {{Qualität: [[[[@{RaT}]] + [[1d8<@{RaT}f8-1]]]] }} {{Wurf: $[[1]]}} }}">RaT</button>
-      <input name="attr_RaT" title="@{RaT}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <input name="attr_RaT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
       <div class="name"></div>
       <button class="text-capitalize" name="roll_KrT" type="roll" value="&{template:default} {{Attribut: KrT}} {{Qualität: [[[[@{KrT}]] + [[1d8<@{KrT}f8-1]]]] }} {{Wurf: $[[1]]}} }}">KrT</button>
-      <input name="attr_KrT" title="@{KrT}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <input name="attr_KrT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
       <div class="name"></div>
       <button class="text-capitalize" name="roll_WiK" type="roll" value="&{template:default} {{Attribut: WiK}} {{Qualität: [[[[@{WiK}]] + [[1d8<@{WiK}f8-1]]]] }} {{Wurf: $[[1]]}} }}">WiK</button>
-      <input name="attr_WiK" title="@{WiK}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <input name="attr_WiK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
     </div>
     <div class="rolls"> 
       <div class="ability">
@@ -118,8 +118,8 @@
       <h6>Positive</h6>
       <fieldset class="repeating_Eigenschaften-Pos">
         <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" value="" style="font-weight: bold"/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" value="" style="font-style: italic"/>
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
         </div>
       </fieldset>
     </div>
@@ -127,8 +127,8 @@
       <h6>Negative</h6>
       <fieldset class="repeating_Eigenschaften-Neg">
         <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" value="" style="font-weight: bold"/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" value="" style="font-style: italic"/>
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
         </div>
       </fieldset>
     </div>
@@ -137,16 +137,16 @@
   <label for="Fertigkeiten">Fertigkeiten</label>
   <div class="tab">
     <div class="passive">
-      <h4>Fertigkeiten</h4>
+      <h4>Fähigkeiten</h4>
       <fieldset class="repeating_Fähigkeiten">
         <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" value="" style="font-weight: bold"/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" value="" style="font-style: italic"/>
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
         </div>
       </fieldset>
     </div>
     <div class="active">
-      <h4>Fähigkeiten</h4>
+      <h4>Fertigkeiten</h4>
       <fieldset class="repeating_Fertigkeiten">
         <div class="rowx grid descriptor">
           <input name="attr_name" placeholder="name" title="@{name}" type="text" value=""/>
@@ -164,8 +164,8 @@
       <h2>Schulden</h2>
       <fieldset class="repeating_Schulden">
         <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" value="" style="font-weight: bold"/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" value="" style="font-style: italic"/>
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
         </div>
       </fieldset>
     </div>
@@ -173,8 +173,8 @@
       <h2>Feinde</h2>
       <fieldset class="repeating_Feinde">
         <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" value="" style="font-weight: bold"/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" value="" style="font-style: italic"/>
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
         </div>
       </fieldset>
     </div>
@@ -182,8 +182,8 @@
       <h2>Verbindungen</h2>
       <fieldset class="repeating_Verbindungen">
         <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" value="" style="font-weight: bold"/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" value="" style="font-style: italic"/>
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
         </div>
       </fieldset>
     </div>
@@ -191,8 +191,8 @@
       <h2>Ruf</h2>
       <fieldset class="repeating_Ruf">
         <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" value="" style="font-weight: bold"/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" value="" style="font-style: italic"/>
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
         </div>
       </fieldset>
     </div>
@@ -211,8 +211,29 @@
       <h2>Besitz</h2>
       <fieldset class="repeating_Besitz">
         <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" value="" style="font-weight: bold"/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" value="" style="font-style: italic"/>
+          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <input name="attr_defaultTab" id="Ausrüstung" type="radio"/>
+  <label for="Ausrüstung">Ausrüstung</label>
+  <div class="tab">
+    <input name="attr_Traglast_computed" type="hidden" value="0"/>
+    <div class="overwiev"> 
+      <label title="Traglast" value="[[@{Traglast_computed}]]">Traglast
+        <input name="attr_Traglast" placeholder="Traglast" title="@{Traglast}" type="text" disabled="true" value="[[@{Traglast_computed}]]"/>
+      </label>
+    </div>
+    <div class="equipment"> <b>Angelegt </b><b>Name </b><b>Beschreibung </b><b>Gewicht </b><b>Rucksack</b>
+      <fieldset class="repeating_ausrüstung">
+        <div class="rowx grid descriptor">
+          <input name="attr_istangelegt" type="checkbox" titel="Ist Angelegt"/>
+          <input name="attr_Name" placeholder="Name" title="@{Name}" type="text" style="font-weight: bold" value=""/>
+          <input name="attr_Beschreibung" placeholder="Beschreibung" title="@{Beschreibung}" type="text" style="font-style: italic" value=""/>
+          <input name="attr_Gewicht" placeholder="Gewicht" title="@{Gewicht}" type="text" style="font-style: italic" value=""/>
+          <input name="attr_istrucksack" type="checkbox" titel="Ist Rucksack"/>
         </div>
       </fieldset>
     </div>
@@ -348,21 +369,7 @@ function getSingleAttrAsync(prop){
         setActiveCharacterId(prevAcid); 
     });
 }
-  on('', (info) => {
-    startRoll("&{template:test} {{name=Test}} {{roll1=[[1d8]]}}", (results) => {
-        const total = results.results.roll1.result
-        const computed = total % 4;
-
-        finishRoll(
-            results.rollId,
-            {
-                roll1: computed
-            }
-        );
-    });
-});
-
-const raspa_abilities = {'Balancieren': {attributes: ['MuK', 'WiK']}, 'Bewaffneter Kampf': {attributes: ['MuK', 'WiK']}, 'Bogenschießen': {attributes: ['MuK', 'RaT']}, 'Fliegen': {attributes: ['MuK', 'AuD']}, 'Leichtathletik': {attributes: ['MuK', 'WiK']}, 'Messerwerfen': {attributes: ['MuK', 'RaT']}, 'Schleudern': {attributes: ['MuK', 'RaT']}, 'Schwerathletik': {attributes: ['MuK', 'RaT']}, 'Schwimmen': {attributes: ['MuK', 'AuD']}, 'Speerwerfen': {attributes: ['MuK', 'RaT']}, 'Turnen': {attributes: ['MuK', 'GeH']}, 'Unbewaffneter Kampf': {attributes: ['MuK', 'GeH']}, 'Werfen': {attributes: ['MuK', 'RaT']}, 'Artillerie': {attributes: ['RaT', 'WiK']}, 'Erste Hilfe': {attributes: ['RaT', 'WiK']}, 'Gießen': {attributes: ['RaT', 'KrT']}, 'Handgeführte Werkzeuge': {attributes: ['AuD', 'MuK']}, 'Handgeführte Maschinen': {attributes: ['AuD', 'MuK']}, 'Löten & Schweißen': {attributes: ['RaT', 'WiK']}, 'Schusswaffen': {attributes: ['MuK', 'WiK']}, 'Manuelle Maschinen': {attributes: ['RaT', 'KrT']}, 'Biologie': {attributes: ['RaT', 'KrT']}, 'Chemie': {attributes: ['RaT', 'KrT']}, 'Physik': {attributes: ['RaT', 'KrT']}, 'Psychologie': {attributes: ['KrT', 'WiK']}, 'Gedächtnis': {attributes: ['RaT', 'KrT']}, 'Geschichte': {attributes: ['RaT', 'KrT']}, 'Materialkunden': {attributes: ['RaT', 'WiK']}, 'Rechnen': {attributes: ['RaT', 'KrT']}, 'Schrift': {attributes: ['RaT', 'KrT']}, 'Selbstbeherrschung': {attributes: ['AuD', 'WiK']}, 'Sprache': {attributes: ['RaT', 'KrT']}, 'Technologie': {attributes: ['RaT', 'KrT']}, 'Wahrnehmung': {attributes: ['RaT', 'KrT']}, 'Auftreten': {attributes: ['KrT', 'WiK']}, 'Durchschauen': {attributes: ['RaT', 'KrT']}, 'Normen': {attributes: ['RaT', 'KrT']}, 'Redekunst': {attributes: ['RaT', 'KrT']}};
+  const raspa_abilities = {'Balancieren': {attributes: ['MuK', 'WiK']}, 'Bewaffneter Kampf': {attributes: ['MuK', 'WiK']}, 'Bogenschießen': {attributes: ['MuK', 'RaT']}, 'Fliegen': {attributes: ['MuK', 'AuD']}, 'Leichtathletik': {attributes: ['MuK', 'WiK']}, 'Messerwerfen': {attributes: ['MuK', 'RaT']}, 'Schleudern': {attributes: ['MuK', 'RaT']}, 'Schwerathletik': {attributes: ['MuK', 'RaT']}, 'Schwimmen': {attributes: ['MuK', 'AuD']}, 'Speerwerfen': {attributes: ['MuK', 'RaT']}, 'Turnen': {attributes: ['MuK', 'GeH']}, 'Unbewaffneter Kampf': {attributes: ['MuK', 'GeH']}, 'Werfen': {attributes: ['MuK', 'RaT']}, 'Artillerie': {attributes: ['RaT', 'WiK']}, 'Erste Hilfe': {attributes: ['RaT', 'WiK']}, 'Gießen': {attributes: ['RaT', 'KrT']}, 'Handgeführte Werkzeuge': {attributes: ['AuD', 'MuK']}, 'Handgeführte Maschinen': {attributes: ['AuD', 'MuK']}, 'Löten & Schweißen': {attributes: ['RaT', 'WiK']}, 'Schusswaffen': {attributes: ['MuK', 'WiK']}, 'Manuelle Maschinen': {attributes: ['RaT', 'KrT']}, 'Biologie': {attributes: ['RaT', 'KrT']}, 'Chemie': {attributes: ['RaT', 'KrT']}, 'Physik': {attributes: ['RaT', 'KrT']}, 'Psychologie': {attributes: ['KrT', 'WiK']}, 'Gedächtnis': {attributes: ['RaT', 'KrT']}, 'Geschichte': {attributes: ['RaT', 'KrT']}, 'Materialkunden': {attributes: ['RaT', 'WiK']}, 'Rechnen': {attributes: ['RaT', 'KrT']}, 'Schrift': {attributes: ['RaT', 'KrT']}, 'Selbstbeherrschung': {attributes: ['AuD', 'WiK']}, 'Sprache': {attributes: ['RaT', 'KrT']}, 'Technologie': {attributes: ['RaT', 'KrT']}, 'Wahrnehmung': {attributes: ['RaT', 'KrT']}, 'Auftreten': {attributes: ['KrT', 'WiK']}, 'Durchschauen': {attributes: ['RaT', 'KrT']}, 'Normen': {attributes: ['RaT', 'KrT']}, 'Redekunst': {attributes: ['RaT', 'KrT']}};
 
 on('clicked:probe', (info) => {
     groupRoll(['AuD', 'GeH', 'MuK', 'RaT', 'KrT', 'WiK']);
@@ -379,6 +386,32 @@ on('change:probeability', async (info) => {
 
     setAttrsAsync(setObject);
 
+});
+
+on('sheet:open change:repeating_ausrüstung:gewicht change:repeating_ausrüstung:istangelegt change:repeating_ausrüstung:istrucksack remove:repeating_ausrüstung add:repeating_ausrüstung', async (info) => {
+    
+    
+    var allEntryIDs = await getSectionIDsAsync(["repeating_ausrüstung"]);
+    var allEntrys = [];
+    var gesamtGewicht = 0;
+    for(entryID of allEntryIDs){
+        allEntrys.push("repeating_ausrüstung_"+entryID+"_istangelegt");
+        allEntrys.push("repeating_ausrüstung_"+entryID+"_Gewicht");
+        allEntrys.push("repeating_ausrüstung_"+entryID+"_istrucksack");
+    }
+    console.log(allEntrys);
+    var allValidEntrys = await getAttrsAsync(allEntrys);
+    console.log(allValidEntrys);
+        for(entryID of allEntryIDs){
+            if (allValidEntrys["repeating_ausrüstung_"+entryID+"_istangelegt"] ==="on") {
+                let gewicht = parseInt(allValidEntrys["repeating_ausrüstung_"+entryID+"_Gewicht"]);
+                gewicht = (isNaN(gewicht)) ? 0 : gewicht;
+                gesamtGewicht += (allValidEntrys["repeating_ausrüstung_"+entryID+"_istrucksack"] === "on") ? gewicht*2 : gewicht
+                console.log(gewicht);
+            }
+        }
+    console.log(gesamtGewicht);
+    setAttrsAsync({"Traglast_computed": gesamtGewicht});
 });
 async function groupRoll(group_) {
     const rollHeader = "&{template:test}";

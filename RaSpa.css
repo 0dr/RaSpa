@@ -67,6 +67,19 @@
   column-gap: 15px;
   row-gap: 2px;
 }
+.overwiev {
+  display: flex;
+  flex-wrap: wrap;
+}
+.overwiev input {
+  width: 100px;
+}
+.equipment {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: space-between;
+}
 .component {
   display: block;
 }

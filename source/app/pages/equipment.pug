@@ -1,0 +1,18 @@
++hiddenVar("Traglast_computed")(value=0)
+.overwiev 
+    //-- +textInputLabeled("Tragkraft", "true")(value=`[[@{AuD}*5]]`)
+    +textInputLabeled("Traglast", "true")(value=`[[@{Traglast_computed}]]`)
+    //- +textInputLabeled("Erschwernis", "true")
+.equipment 
+    b Angelegt 
+    b Name 
+    b Beschreibung 
+    b Gewicht 
+    b Rucksack
+    fieldset(class=`repeating_ausrüstung`)
+        .rowx.grid.descriptor
+            +checkboxInput('istangelegt')(titel="Ist Angelegt")
+            +textInput(`Name`,`font-weight: bold`)
+            +textInput('Beschreibung', `font-style: italic`)
+            +textInput('Gewicht', `font-style: italic`)
+            +checkboxInput('istrucksack')(titel="Ist Rucksack")

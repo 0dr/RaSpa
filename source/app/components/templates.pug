@@ -3,31 +3,31 @@
 - const removeSpace = name => name.replace(/ /g, '');
 - const toLowerCase = name => name.toLowerCase();
 
-mixin textInputLabeled(name)
-    label(title=`${name}`)=name
-        input(name=`attr_${attrName(name)}` placeholder=name title=`@{${attrName(name)}}` type='text' value='')
+mixin textInputLabeled(name, state='false')
+    label(title=`${name}`)&attributes(attributes)=name
+        input(name=`attr_${attrName(name)}` placeholder=name title=`@{${attrName(name)}}` type='text' disabled=state value=``)&attributes(attributes)
+
+mixin hiddenVar(name)
+    input(name=`attr_${attrName(name)}` type='hidden')&attributes(attributes)
 
 mixin textInput(name, style="")
-    input(name=`attr_${attrName(name)}` placeholder=name title=`@{${attrName(name)}}` type='text' value='' style=style)
+    input(name=`attr_${attrName(name)}` placeholder=name title=`@{${attrName(name)}}` type='text' style=style value=``)&attributes(attributes)
 
 mixin numberInput(name)
-
     input(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]')
 
-mixin numberInputLabeled(name)
+mixin numberInputLabeled(name, state='false')
     label(title=`enter ${name}`)=name
-        input(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]')
+        input(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]' disabled=state)
 
 mixin numberInputRollable(name)
     .name
     +rollButton(name)
-    input(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]')
+    input(name=`attr_${attrName(name)}`  type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]')
 
 
 mixin checkboxInput(name)
-    label.styled-checkbox.grid(title=`enter ${name}`)
-        input(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='checkbox' value=name)
-        span.pictos 3
+    input(name=`attr_${attrName(name)}` type='checkbox')&attributes(attributes)
 
 mixin checkboxSymbol(name, symbol)
     input.toggles.text-center(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='checkbox' value=name)
@@ -67,6 +67,7 @@ mixin repeatingText(name)
         .rowx.grid.descriptor
                 +textInput(`name`,`font-weight: bold`)
                 +textInput('description', `font-style: italic`)
+
 
 
 mixin dropDown(name, entrys=[])
