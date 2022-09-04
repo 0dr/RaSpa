@@ -5,19 +5,19 @@
   <div class="tab">
     <div class="about_main">
       <label title="Name">Name
-        <input name="attr_Name" placeholder="Name" title="@{Name}" type="text" disabled="false" value=""/>
+        <input name="attr_Name" placeholder="Name" title="@{Name}" type="text" value=""/>
       </label>
       <label title="Rasse">Rasse
-        <input name="attr_Rasse" placeholder="Rasse" title="@{Rasse}" type="text" disabled="false" value=""/>
+        <input name="attr_Rasse" placeholder="Rasse" title="@{Rasse}" type="text" value=""/>
       </label>
       <label title="Alter">Alter
-        <input name="attr_Alter" placeholder="Alter" title="@{Alter}" type="text" disabled="false" value=""/>
+        <input name="attr_Alter" placeholder="Alter" title="@{Alter}" type="text" value=""/>
       </label>
       <label title="Größe">Größe
-        <input name="attr_Größe" placeholder="Größe" title="@{Größe}" type="text" disabled="false" value=""/>
+        <input name="attr_Größe" placeholder="Größe" title="@{Größe}" type="text" value=""/>
       </label>
       <label title="Gewicht">Gewicht
-        <input name="attr_Gewicht" placeholder="Gewicht" title="@{Gewicht}" type="text" disabled="false" value=""/>
+        <input name="attr_Gewicht" placeholder="Gewicht" title="@{Gewicht}" type="text" value=""/>
       </label>
     </div>
     <div class="about_details">
@@ -160,61 +160,72 @@
   <input name="attr_defaultTab" id="Ressourcen" type="radio"/>
   <label for="Ressourcen">Ressourcen</label>
   <div class="tab">
-    <div class="schulden"> 
-      <h2>Schulden</h2>
-      <fieldset class="repeating_Schulden">
-        <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
-        </div>
-      </fieldset>
-    </div>
-    <div class="feinde"> 
-      <h2>Feinde</h2>
-      <fieldset class="repeating_Feinde">
-        <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
-        </div>
-      </fieldset>
-    </div>
-    <div class="verbindungen"> 
-      <h2>Verbindungen</h2>
-      <fieldset class="repeating_Verbindungen">
-        <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
-        </div>
-      </fieldset>
-    </div>
-    <div class="ruf">
-      <h2>Ruf</h2>
-      <fieldset class="repeating_Ruf">
-        <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
-        </div>
-      </fieldset>
-    </div>
-    <div class="stand">
-      <h2>Stand</h2>
-      <select name="Stand">
-        <option value="-3">Mittellose</option>
-        <option value="-2">Vagabund</option>
-        <option value="-1">Unterschicht</option>
-        <option value="0">Mittelstand</option>
-        <option value="1">obere Mittelschicht</option>
-        <option value="2">Oberschicht</option>
-      </select>
-    </div>
-    <div class="besitz"> 
-      <h2>Besitz</h2>
-      <fieldset class="repeating_Besitz">
-        <div class="rowx grid descriptor">
-          <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
-          <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
-        </div>
-      </fieldset>
+    <div class="ressources">
+      <div class="schulden"> 
+        <h2>Schulden</h2>
+        <fieldset class="repeating_Schulden">
+          <div class="rowx grid descriptor">
+            <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+            <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
+          </div>
+        </fieldset>
+      </div>
+      <div class="feinde"> 
+        <h2>Feinde</h2>
+        <fieldset class="repeating_Feinde">
+          <div class="rowx grid descriptor">
+            <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+            <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
+          </div>
+        </fieldset>
+      </div>
+      <div class="verbindungen"> 
+        <h2>Verbindungen</h2>
+        <fieldset class="repeating_Verbindungen">
+          <div class="rowx grid descriptor">
+            <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+            <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
+          </div>
+        </fieldset>
+      </div>
+      <div class="ruf">
+        <h2>Ruf</h2>
+        <fieldset class="repeating_Ruf">
+          <div class="rowx grid descriptor">
+            <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+            <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
+          </div>
+        </fieldset>
+      </div>
+      <div class="privilegien">
+        <h2>Privilegien</h2>
+        <fieldset class="repeating_Privilegien">
+          <div class="rowx grid descriptor">
+            <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+            <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
+          </div>
+        </fieldset>
+      </div>
+      <div class="stand">
+        <h2>Stand</h2>
+        <select name="Stand">
+          <option value="-3">Mittellose</option>
+          <option value="-2">Vagabund</option>
+          <option value="-1">Unterschicht</option>
+          <option value="0">Mittelstand</option>
+          <option value="1">obere Mittelschicht</option>
+          <option value="2">Oberschicht</option>
+        </select>
+      </div>
+      <div class="besitz"> 
+        <h2>Besitz</h2>
+        <fieldset class="repeating_Besitz">
+          <div class="rowx grid descriptor">
+            <input name="attr_name" placeholder="name" title="@{name}" type="text" style="font-weight: bold" value=""/>
+            <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
+          </div>
+        </fieldset>
+      </div>
     </div>
   </div>
   <input name="attr_defaultTab" id="Ausrüstung" type="radio"/>
@@ -222,8 +233,8 @@
   <div class="tab">
     <input name="attr_Traglast_computed" type="hidden" value="0"/>
     <div class="overwiev"> 
-      <label title="Traglast" value="[[@{Traglast_computed}]]">Traglast
-        <input name="attr_Traglast" placeholder="Traglast" title="@{Traglast}" type="text" disabled="true" value="[[@{Traglast_computed}]]"/>
+      <label title="Traglast" value="[[@{Traglast_computed}]]" disabled="disabled">Traglast
+        <input name="attr_Traglast" placeholder="Traglast" title="@{Traglast}" type="text" value="[[@{Traglast_computed}]]" disabled="disabled"/>
       </label>
     </div>
     <div class="equipment"> <b>Angelegt </b><b>Name </b><b>Beschreibung </b><b>Gewicht </b><b>Rucksack</b>

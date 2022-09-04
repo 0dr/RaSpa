@@ -67,6 +67,12 @@
   column-gap: 15px;
   row-gap: 2px;
 }
+.ressources .repcontainer {
+  display: block;
+}
+.ressources .rowx.grid.descriptor input[name="attr_description"] {
+  width: 60%;
+}
 .overwiev {
   display: flex;
   flex-wrap: wrap;
