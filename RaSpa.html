@@ -53,44 +53,52 @@
     <div class="rolls"> 
       <div class="ability">
         <select name="attr_probeAbility">
-          <option value="Balancieren">Balancieren</option>
-          <option value="Bewaffneter Kampf">Bewaffneter Kampf</option>
-          <option value="Bogenschießen">Bogenschießen</option>
-          <option value="Fliegen">Fliegen</option>
-          <option value="Leichtathletik">Leichtathletik</option>
-          <option value="Messerwerfen">Messerwerfen</option>
-          <option value="Schleudern">Schleudern</option>
-          <option value="Schwerathletik">Schwerathletik</option>
-          <option value="Schwimmen">Schwimmen</option>
-          <option value="Speerwerfen">Speerwerfen</option>
-          <option value="Turnen">Turnen</option>
-          <option value="Unbewaffneter Kampf">Unbewaffneter Kampf</option>
-          <option value="Werfen">Werfen</option>
-          <option value="Artillerie">Artillerie</option>
-          <option value="Erste Hilfe">Erste Hilfe</option>
-          <option value="Gießen">Gießen</option>
-          <option value="Handgeführte Werkzeuge">Handgeführte Werkzeuge</option>
-          <option value="Handgeführte Maschinen">Handgeführte Maschinen</option>
-          <option value="Löten &amp; Schweißen">Löten &amp; Schweißen</option>
-          <option value="Schusswaffen">Schusswaffen</option>
-          <option value="Manuelle Maschinen">Manuelle Maschinen</option>
-          <option value="Biologie">Biologie</option>
-          <option value="Chemie">Chemie</option>
-          <option value="Physik">Physik</option>
-          <option value="Psychologie">Psychologie</option>
-          <option value="Gedächtnis">Gedächtnis</option>
-          <option value="Geschichte">Geschichte</option>
-          <option value="Materialkunden">Materialkunden</option>
-          <option value="Rechnen">Rechnen</option>
-          <option value="Schrift">Schrift</option>
-          <option value="Selbstbeherrschung">Selbstbeherrschung</option>
-          <option value="Sprache">Sprache</option>
-          <option value="Technologie">Technologie</option>
-          <option value="Wahrnehmung">Wahrnehmung</option>
-          <option value="Auftreten">Auftreten</option>
-          <option value="Durchschauen">Durchschauen</option>
-          <option value="Normen">Normen</option>
-          <option value="Redekunst">Redekunst</option>
+          <option style="font-weight: bold; font-size: large;" disabled="disabled">Grobmotorik
+            <option value="Balancieren">Balancieren</option>
+            <option value="Bewaffneter Kampf">Bewaffneter Kampf</option>
+            <option value="Bogenschießen">Bogenschießen</option>
+            <option value="Fliegen">Fliegen</option>
+            <option value="Leichtathletik">Leichtathletik</option>
+            <option value="Messerwerfen">Messerwerfen</option>
+            <option value="Schleudern">Schleudern</option>
+            <option value="Schwerathletik">Schwerathletik</option>
+            <option value="Schwimmen">Schwimmen</option>
+            <option value="Speerwerfen">Speerwerfen</option>
+            <option value="Turnen">Turnen</option>
+            <option value="Unbewaffneter Kampf">Unbewaffneter Kampf</option>
+            <option value="Werfen">Werfen</option>
+          </option>
+          <option style="font-weight: bold; font-size: large;" disabled="disabled">Feinmotorik
+            <option value="Artillerie">Artillerie</option>
+            <option value="Erste Hilfe">Erste Hilfe</option>
+            <option value="Gießen">Gießen</option>
+            <option value="Handgeführte Werkzeuge">Handgeführte Werkzeuge</option>
+            <option value="Handgeführte Maschinen">Handgeführte Maschinen</option>
+            <option value="Löten &amp; Schweißen">Löten &amp; Schweißen</option>
+            <option value="Schusswaffen">Schusswaffen</option>
+            <option value="Manuelle Maschinen">Manuelle Maschinen</option>
+          </option>
+          <option style="font-weight: bold; font-size: large;" disabled="disabled">Geistig
+            <option value="Biologie">Biologie</option>
+            <option value="Chemie">Chemie</option>
+            <option value="Physik">Physik</option>
+            <option value="Psychologie">Psychologie</option>
+            <option value="Gedächtnis">Gedächtnis</option>
+            <option value="Geschichte">Geschichte</option>
+            <option value="Materialkunden">Materialkunden</option>
+            <option value="Rechnen">Rechnen</option>
+            <option value="Schrift">Schrift</option>
+            <option value="Selbstbeherrschung">Selbstbeherrschung</option>
+            <option value="Sprache">Sprache</option>
+            <option value="Technologie">Technologie</option>
+            <option value="Wahrnehmung">Wahrnehmung</option>
+          </option>
+          <option style="font-weight: bold; font-size: large;" disabled="disabled">Sozial
+            <option value="Auftreten">Auftreten</option>
+            <option value="Durchschauen">Durchschauen</option>
+            <option value="Normen">Normen</option>
+            <option value="Redekunst">Redekunst</option>
+          </option>
         </select>
       </div>
       <div class="probe">
@@ -247,6 +255,27 @@
           <input name="attr_istrucksack" type="checkbox" titel="Ist Rucksack"/>
         </div>
       </fieldset>
+    </div>
+  </div>
+  <input name="attr_defaultTab" id="Generierung" type="radio"/>
+  <label for="Generierung">Generierung</label>
+  <div class="tab">
+    <div class="generator"> 
+      <h3>Charaktergenerator </h3>
+      <div class="esp"> 
+        <h4>Eigenschaftspunkte</h4>
+        <div class="selector"> 
+          <select name="attr_espSelect}">
+            <option></option>
+          </select>
+        </div>
+      </div>
+      <div class="mop"> 
+        <h4>Motivationspunkte</h4>
+      </div>
+      <div class="res"> 
+        <h4>Ressourcen </h4>
+      </div>
     </div>
   </div>
 </div>

@@ -93,5 +93,7 @@ mixin createTab(name, cat)
 
 mixin abilitySelect(name)
     select(name=`attr_${attrName(name)}`)
-        each entry in raspa_abilities
-            option(value=entry.name)=entry.name 
+        each group in raspa_abilities
+            option(style="font-weight: bold; font-size: large;" disabled)=group.name
+                each entry in group.group
+                    option(value=entry.name)=entry.name 
