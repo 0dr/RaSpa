@@ -4,11 +4,12 @@
     +textInputLabeled("Traglast")(value=`[[@{Traglast_computed}]]` disabled=true)
     //- +textInputLabeled("Erschwernis", "true")
 .equipment 
-    b Angelegt 
-    b Name 
-    b Beschreibung 
-    b Gewicht 
-    b Rucksack
+    .head
+        b Angelegt 
+        b Name 
+        b Beschreibung 
+        b Gewicht 
+        b Rucksack
     fieldset(class=`repeating_ausrüstung`)
         .rowx.grid.descriptor
             +checkboxInput('istangelegt')(titel="Ist Angelegt")

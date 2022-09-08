@@ -25,7 +25,7 @@
     .res 
         h4 Ressourcen 
         .header
-            +numberInputLabeled("Ressourcen")(disabled value="@{ReP_calc}")
+            +numberInputLabeled("Ressourcen")(value=10)
             +numberInputLabeled("Verbraucht")(disabled value="@{ReP_used}")
             +hiddenVar("ReP_calc")(value=10)
             +hiddenVar("ReP_used")(value=0)
@@ -39,3 +39,8 @@
                     +hiddenVar("ReP_val")(value="0")
 
     +actionButton("Apply")
+    .beta 
+        - var n= 0
+            while n < 1500
+                | beta 
+                - n++

@@ -86,12 +86,12 @@ mixin createRollSet(name, list)
     +actionButton(name)
 
 mixin createTabDefault(name)
-    +createTab(name, "defaultTab")
+    +createTab(name, "defaultTab")&attributes(attributes)
         block
 
 mixin createTab(name, cat)
     input(name=`attr_${attrName(cat)}` id=name type='radio')
-    label(for=name)= name
+    label(for=name)&attributes(attributes)=name
     .tab
         block
 
