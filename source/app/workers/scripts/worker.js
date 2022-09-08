@@ -42,3 +42,98 @@ on('sheet:open change:repeating_ausrüstung:gewicht change:repeating_ausrüstung
     console.log(gesamtGewicht);
     setAttrsAsync({"Traglast_computed": gesamtGewicht});
 });
+
+
+on('change:repeating_ressources:ReP_val', async (info) => {
+    console.log(info);
+    var calcVal = await getAttrsAsync(["ReP_used"]);
+    console.log(calcVal);
+    calcVal = parseInt(calcVal["ReP_used"]);
+    console.log(calcVal);
+    calcVal -= (info.previousValue) ? info.previousValue: 0;
+    console.log(info.previousValue);
+    console.log(calcVal);
+    calcVal += info.newValue;
+    console.log(info.newValue);
+    console.log(calcVal);
+
+    setAttrsAsync({"ReP_used": calcVal});
+
+});
+
+
+on('remove:repeating_ressources', async (info) => {
+    console.log(info);
+    var allEntryIDs = await getSectionIDsAsync(["repeating_ressources"]);
+    var allEntrys = [];
+    var gesamtWert = 0;
+    for(entryID of allEntryIDs){
+        allEntrys.push("repeating_ressources_"+entryID+"_ReP_val");
+    }
+    console.log(allEntrys);
+    var allValidEntrys = await getAttrsAsync(allEntrys);
+    console.log(allValidEntrys);
+    for(entryID of allEntryIDs){
+        gesamtWert += parseInt(allValidEntrys["repeating_ressources_"+entryID+"_ReP_val"]);
+        console.log(gesamtWert);
+        
+    }
+    console.log(gesamtWert);
+    setAttrsAsync({"ReP_used": gesamtWert});
+
+});
+
+on('change:repeating_ressources:type change:repeating_ressources:wert', async (info) => {
+    console.log("START");
+    console.log(info);
+    var type = "default";
+    var base = 0;
+    var wert = 0;
+    var id = info.sourceAttribute.replace('repeating_ressources_','');
+
+    if (!info.sourceAttribute.includes("wert")) {
+        base = await getAttrsAsync(["repeating_ressources_wert"])
+        base = parseInt(base["repeating_ressources_wert"]);
+        console.log("GETBASE: "+ base);
+        console.log(base);
+    }else{
+        base = parseInt(info.newValue);
+        id = id.replace('_wert','');
+        console.log("Base = INFO: " +base);
+    }
+
+    if (!info.sourceAttribute.includes("type")) {
+        type = await getAttrsAsync(["repeating_ressources_type"]);
+        type = type["repeating_ressources_type"];
+        console.log("GETTYPE: "+ type);
+        console.log(type);
+    }else{
+        type = info.newValue;
+        id = id.replace('_type','');
+        console.log("Type = INFO: " +type);
+    }
+
+    switch (type) {
+        case "Besitz":
+        case "Kontakte":
+        case "Privilegien":
+        case "Ruf":
+            wert = base;
+            break
+        case "Schulden":
+        case "Feinde":
+            wert = Math.abs(base) * -1;
+            break;
+        case "Stand":
+            wert = Math.pow(base,2);
+            break;
+    }
+    
+    
+    var variableName = "repeating_ressources_"+id+"_ReP_val";
+    var fill = {};
+    fill[variableName]=wert
+    console.log(wert);
+    console.log(variableName);
+    setAttrsAsync(fill)
+});

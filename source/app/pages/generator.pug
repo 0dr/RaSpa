@@ -1,0 +1,41 @@
+.generator 
+    h3 Charaktergenerator 
+
+    .esp 
+        h4 Eigenschaftspunkte
+        
+        .selector 
+            select(name=`attr_espSelect}`)
+                each entry in raspa_esp
+                    option(value=entry.name)=entry.name 
+    .mop 
+        h4 Motivationspunkte
+        .header
+            +numberInputLabeled("Startalter")(value="16")
+            +numberInputLabeled("MoP")(disabled value="@{MoP_calc}")
+            +numberInputLabeled("Verbraucht")(disabled value="@{MoP_used}")
+            +hiddenVar("MoP_calc")(value="0")
+            +hiddenVar("MoP_used")(value="0")
+        .body 
+            fieldset(class=`repeating_prowess`)
+                .rowx.grid.descriptor
+                    +dropDownDefault("Type", raspa_prowess_names)
+                    +textInput('description', `font-style: italic`)
+                    +numberInput(``)
+    .res 
+        h4 Ressourcen 
+        .header
+            +numberInputLabeled("Ressourcen")(disabled value="@{ReP_calc}")
+            +numberInputLabeled("Verbraucht")(disabled value="@{ReP_used}")
+            +hiddenVar("ReP_calc")(value=10)
+            +hiddenVar("ReP_used")(value=0)
+        .body
+            fieldset(class=`repeating_ressources`)
+                .rowx.grid.descriptor
+                    +dropDownDefault("Type", raspa_ress_names)
+                    +textInput('description', `font-style: italic`)
+                    +numberInput(`Wert`)
+                    +numberInput(`Kosten`)(value=`@{ReP_val}` disabled="true")
+                    +hiddenVar("ReP_val")(value="0")
+
+    +actionButton("Apply")

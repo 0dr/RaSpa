@@ -67,6 +67,20 @@
   column-gap: 15px;
   row-gap: 2px;
 }
+.generator {
+  margine: 10px;
+  display: block;
+}
+.generator .mop .header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.generator .res .header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 .ressources .repcontainer {
   display: block;
 }

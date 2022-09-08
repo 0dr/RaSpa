@@ -159,7 +159,7 @@
         <div class="rowx grid descriptor">
           <input name="attr_name" placeholder="name" title="@{name}" type="text" value=""/>
           <input name="attr_description" placeholder="description" title="@{description}" type="text" value=""/>
-          <input name="attr_quality" title="@{quality}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+          <input name="attr_quality" title="@{quality}" type="number" value="0" step="1" pattern="^[0-9]"/>
           <button class="text-left ellipsis font-weight-bold" name="roll_Fertigkeiten" type="roll" value=""><span name="attr_name"></span></button>
         </div>
       </fieldset>
@@ -216,7 +216,7 @@
       </div>
       <div class="stand">
         <h2>Stand</h2>
-        <select name="Stand">
+        <select name="attr_Stand">
           <option value="-3">Mittellose</option>
           <option value="-2">Vagabund</option>
           <option value="-1">Unterschicht</option>
@@ -272,10 +272,76 @@
       </div>
       <div class="mop"> 
         <h4>Motivationspunkte</h4>
+        <div class="header">
+          <label title="enter Startalter">Startalter
+            <input name="attr_Startalter" title="@{Startalter}" type="number" value="16" min="0" max="99" step="1" pattern="^[0-9]"/>
+          </label>
+          <label title="enter MoP">MoP
+            <input name="attr_MoP" title="@{MoP}" type="number" value="@{MoP_calc}" min="0" max="99" step="1" pattern="^[0-9]" disabled="disabled"/>
+          </label>
+          <label title="enter Verbraucht">Verbraucht
+            <input name="attr_Verbraucht" title="@{Verbraucht}" type="number" value="@{MoP_used}" min="0" max="99" step="1" pattern="^[0-9]" disabled="disabled"/>
+          </label>
+          <input name="attr_MoP_calc" type="hidden" value="0"/>
+          <input name="attr_MoP_used" type="hidden" value="0"/>
+        </div>
+        <div class="body"> 
+          <fieldset class="repeating_prowess">
+            <div class="rowx grid descriptor">
+              <select name="attr_Type">
+                <option value="Augenmaß">Augenmaß</option>
+                <option value="Instinkt">Instinkt</option>
+                <option value="Improvisationstalent">Improvisationstalent</option>
+                <option value="Lehrmeister">Lehrmeister</option>
+                <option value="Selbstbewusstsein">Selbstbewusstsein</option>
+                <option value="Spezialgebiet">Spezialgebiet</option>
+                <option value="Angst">Angst</option>
+                <option value="Fertigkeit">Fertigkeit</option>
+                <option value="Fertigkeitsgruppe">Fertigkeitsgruppe</option>
+                <option value="Fettleibigkeit">Fettleibigkeit</option>
+                <option value="Sucht">Sucht</option>
+                <option value="Unwissenheit">Unwissenheit</option>
+                <option value="Zwang">Zwang</option>
+              </select>
+              <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
+              <input name="attr_" title="@{}" type="number" value="0" step="1" pattern="^[0-9]"/>
+            </div>
+          </fieldset>
+        </div>
       </div>
       <div class="res"> 
         <h4>Ressourcen </h4>
+        <div class="header">
+          <label title="enter Ressourcen">Ressourcen
+            <input name="attr_Ressourcen" title="@{Ressourcen}" type="number" value="@{ReP_calc}" min="0" max="99" step="1" pattern="^[0-9]" disabled="disabled"/>
+          </label>
+          <label title="enter Verbraucht">Verbraucht
+            <input name="attr_Verbraucht" title="@{Verbraucht}" type="number" value="@{ReP_used}" min="0" max="99" step="1" pattern="^[0-9]" disabled="disabled"/>
+          </label>
+          <input name="attr_ReP_calc" type="hidden" value="10"/>
+          <input name="attr_ReP_used" type="hidden" value="0"/>
+        </div>
+        <div class="body">
+          <fieldset class="repeating_ressources">
+            <div class="rowx grid descriptor">
+              <select name="attr_Type">
+                <option value="Besitz">Besitz</option>
+                <option value="Feinde">Feinde</option>
+                <option value="Kontakte">Kontakte</option>
+                <option value="Privilegien">Privilegien</option>
+                <option value="Ruf">Ruf</option>
+                <option value="Schulden">Schulden</option>
+                <option value="Stand">Stand</option>
+              </select>
+              <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
+              <input name="attr_Wert" title="@{Wert}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              <input name="attr_Kosten" title="@{Kosten}" type="number" value="@{ReP_val}" step="1" pattern="^[0-9]" disabled="true"/>
+              <input name="attr_ReP_val" type="hidden" value="0"/>
+            </div>
+          </fieldset>
+        </div>
       </div>
+      <button class="text-capitalize" name="act_Apply" type="action">Apply</button>
     </div>
   </div>
 </div>
@@ -452,6 +518,101 @@ on('sheet:open change:repeating_ausrüstung:gewicht change:repeating_ausrüstung
         }
     console.log(gesamtGewicht);
     setAttrsAsync({"Traglast_computed": gesamtGewicht});
+});
+
+
+on('change:repeating_ressources:ReP_val', async (info) => {
+    console.log(info);
+    var calcVal = await getAttrsAsync(["ReP_used"]);
+    console.log(calcVal);
+    calcVal = parseInt(calcVal["ReP_used"]);
+    console.log(calcVal);
+    calcVal -= (info.previousValue) ? info.previousValue: 0;
+    console.log(info.previousValue);
+    console.log(calcVal);
+    calcVal += info.newValue;
+    console.log(info.newValue);
+    console.log(calcVal);
+
+    setAttrsAsync({"ReP_used": calcVal});
+
+});
+
+
+on('remove:repeating_ressources', async (info) => {
+    console.log(info);
+    var allEntryIDs = await getSectionIDsAsync(["repeating_ressources"]);
+    var allEntrys = [];
+    var gesamtWert = 0;
+    for(entryID of allEntryIDs){
+        allEntrys.push("repeating_ressources_"+entryID+"_ReP_val");
+    }
+    console.log(allEntrys);
+    var allValidEntrys = await getAttrsAsync(allEntrys);
+    console.log(allValidEntrys);
+    for(entryID of allEntryIDs){
+        gesamtWert += parseInt(allValidEntrys["repeating_ressources_"+entryID+"_ReP_val"]);
+        console.log(gesamtWert);
+        
+    }
+    console.log(gesamtWert);
+    setAttrsAsync({"ReP_used": gesamtWert});
+
+});
+
+on('change:repeating_ressources:type change:repeating_ressources:wert', async (info) => {
+    console.log("START");
+    console.log(info);
+    var type = "default";
+    var base = 0;
+    var wert = 0;
+    var id = info.sourceAttribute.replace('repeating_ressources_','');
+
+    if (!info.sourceAttribute.includes("wert")) {
+        base = await getAttrsAsync(["repeating_ressources_wert"])
+        base = parseInt(base["repeating_ressources_wert"]);
+        console.log("GETBASE: "+ base);
+        console.log(base);
+    }else{
+        base = parseInt(info.newValue);
+        id = id.replace('_wert','');
+        console.log("Base = INFO: " +base);
+    }
+
+    if (!info.sourceAttribute.includes("type")) {
+        type = await getAttrsAsync(["repeating_ressources_type"]);
+        type = type["repeating_ressources_type"];
+        console.log("GETTYPE: "+ type);
+        console.log(type);
+    }else{
+        type = info.newValue;
+        id = id.replace('_type','');
+        console.log("Type = INFO: " +type);
+    }
+
+    switch (type) {
+        case "Besitz":
+        case "Kontakte":
+        case "Privilegien":
+        case "Ruf":
+            wert = base;
+            break
+        case "Schulden":
+        case "Feinde":
+            wert = Math.abs(base) * -1;
+            break;
+        case "Stand":
+            wert = Math.pow(base,2);
+            break;
+    }
+    
+    
+    var variableName = "repeating_ressources_"+id+"_ReP_val";
+    var fill = {};
+    fill[variableName]=wert
+    console.log(wert);
+    console.log(variableName);
+    setAttrsAsync(fill)
 });
 async function groupRoll(group_) {
     const rollHeader = "&{template:test}";
