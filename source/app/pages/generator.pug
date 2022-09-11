@@ -17,11 +17,24 @@
             +hiddenVar("MoP_calc")(value="0")
             +hiddenVar("MoP_used")(value="0")
         .body 
-            fieldset(class=`repeating_prowess`)
-                .rowx.grid.descriptor
-                    +dropDownDefault("Type", raspa_prowess_names)
-                    +textInput('description', `font-style: italic`)
-                    +numberInput(``)
+            .body-prowess
+                fieldset(class=`repeating_prowess`)
+                    .rowx.grid.descriptor
+                        +dropDownDefault("Type", raspa_prowess_names)
+                        +textInput('description', `font-style: italic`)
+                        +numberInput(``)
+            .body-abilities
+                each group in raspa_abilities
+                    div(name=group.name) 
+                        h3=group.name 
+                        each entry in group.group
+                            div(name=entry.name)
+                                b=entry.name
+                                p ALLE Spezialisierungen 
+                                +textInput(`${group.name}_${entry.name}_show`)(value=`${group.name}_${entry.name}_calc` disabled)
+                                +hiddenVar(`${group.name}_${entry.name}_calc`)
+                                +numberInput(`${group.name}_${entry.name}`)
+
     .res 
         h4 Ressourcen 
         .header

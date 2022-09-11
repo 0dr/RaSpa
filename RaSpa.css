@@ -74,7 +74,7 @@
   row-gap: 2px;
 }
 .generator {
-  margine: 10px;
+  margin: 10px;
   display: block;
 }
 .generator .mop .header {
@@ -97,6 +97,17 @@
   transform: rotate(315deg);
   -webkit-transform: rotate(315deg);
   font-size: x-large;
+}
+.body-abilities div div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.body-abilities div div > * {
+  padding-right: 25px;
+}
+.body-abilities div div input {
+  margin-left: auto;
 }
 .ressources .repcontainer {
   display: block;

@@ -287,27 +287,271 @@
           <input name="attr_MoP_used" type="hidden" value="0"/>
         </div>
         <div class="body"> 
-          <fieldset class="repeating_prowess">
-            <div class="rowx grid descriptor">
-              <select name="attr_Type">
-                <option value="Augenmaß">Augenmaß</option>
-                <option value="Instinkt">Instinkt</option>
-                <option value="Improvisationstalent">Improvisationstalent</option>
-                <option value="Lehrmeister">Lehrmeister</option>
-                <option value="Selbstbewusstsein">Selbstbewusstsein</option>
-                <option value="Spezialgebiet">Spezialgebiet</option>
-                <option value="Angst">Angst</option>
-                <option value="Fertigkeit">Fertigkeit</option>
-                <option value="Fertigkeitsgruppe">Fertigkeitsgruppe</option>
-                <option value="Fettleibigkeit">Fettleibigkeit</option>
-                <option value="Sucht">Sucht</option>
-                <option value="Unwissenheit">Unwissenheit</option>
-                <option value="Zwang">Zwang</option>
-              </select>
-              <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
-              <input name="attr_" title="@{}" type="number" value="0" step="1" pattern="^[0-9]"/>
+          <div class="body-prowess">
+            <fieldset class="repeating_prowess">
+              <div class="rowx grid descriptor">
+                <select name="attr_Type">
+                  <option value="Augenmaß">Augenmaß</option>
+                  <option value="Instinkt">Instinkt</option>
+                  <option value="Improvisationstalent">Improvisationstalent</option>
+                  <option value="Lehrmeister">Lehrmeister</option>
+                  <option value="Selbstbewusstsein">Selbstbewusstsein</option>
+                  <option value="Spezialgebiet">Spezialgebiet</option>
+                  <option value="Angst">Angst</option>
+                  <option value="Unfähigkeit Fertigkeit">Unfähigkeit Fertigkeit</option>
+                  <option value="Unfähigkeit Fertigkeitsgruppe">Unfähigkeit Fertigkeitsgruppe</option>
+                  <option value="Fettleibigkeit">Fettleibigkeit</option>
+                  <option value="Sucht">Sucht</option>
+                  <option value="Unwissenheit">Unwissenheit</option>
+                  <option value="Zwang">Zwang</option>
+                </select>
+                <input name="attr_description" placeholder="description" title="@{description}" type="text" style="font-style: italic" value=""/>
+                <input name="attr_" title="@{}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+            </fieldset>
+          </div>
+          <div class="body-abilities">
+            <div name="Grobmotorik"> 
+              <h3>Grobmotorik</h3>
+              <div name="Balancieren"><b>Balancieren</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Balancieren_show" placeholder="Grobmotorik_Balancieren_show" title="@{Grobmotorik_Balancieren_show}" type="text" value="Grobmotorik_Balancieren_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Balancieren_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Balancieren" title="@{Grobmotorik_Balancieren}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Bewaffneter Kampf"><b>Bewaffneter Kampf</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Bewaffneter_Kampf_show" placeholder="Grobmotorik_Bewaffneter Kampf_show" title="@{Grobmotorik_Bewaffneter_Kampf_show}" type="text" value="Grobmotorik_Bewaffneter Kampf_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Bewaffneter_Kampf_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Bewaffneter_Kampf" title="@{Grobmotorik_Bewaffneter_Kampf}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Bogenschießen"><b>Bogenschießen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Bogenschießen_show" placeholder="Grobmotorik_Bogenschießen_show" title="@{Grobmotorik_Bogenschießen_show}" type="text" value="Grobmotorik_Bogenschießen_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Bogenschießen_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Bogenschießen" title="@{Grobmotorik_Bogenschießen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Fliegen"><b>Fliegen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Fliegen_show" placeholder="Grobmotorik_Fliegen_show" title="@{Grobmotorik_Fliegen_show}" type="text" value="Grobmotorik_Fliegen_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Fliegen_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Fliegen" title="@{Grobmotorik_Fliegen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Leichtathletik"><b>Leichtathletik</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Leichtathletik_show" placeholder="Grobmotorik_Leichtathletik_show" title="@{Grobmotorik_Leichtathletik_show}" type="text" value="Grobmotorik_Leichtathletik_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Leichtathletik_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Leichtathletik" title="@{Grobmotorik_Leichtathletik}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Messerwerfen"><b>Messerwerfen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Messerwerfen_show" placeholder="Grobmotorik_Messerwerfen_show" title="@{Grobmotorik_Messerwerfen_show}" type="text" value="Grobmotorik_Messerwerfen_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Messerwerfen_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Messerwerfen" title="@{Grobmotorik_Messerwerfen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Schleudern"><b>Schleudern</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Schleudern_show" placeholder="Grobmotorik_Schleudern_show" title="@{Grobmotorik_Schleudern_show}" type="text" value="Grobmotorik_Schleudern_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Schleudern_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Schleudern" title="@{Grobmotorik_Schleudern}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Schwerathletik"><b>Schwerathletik</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Schwerathletik_show" placeholder="Grobmotorik_Schwerathletik_show" title="@{Grobmotorik_Schwerathletik_show}" type="text" value="Grobmotorik_Schwerathletik_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Schwerathletik_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Schwerathletik" title="@{Grobmotorik_Schwerathletik}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Schwimmen"><b>Schwimmen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Schwimmen_show" placeholder="Grobmotorik_Schwimmen_show" title="@{Grobmotorik_Schwimmen_show}" type="text" value="Grobmotorik_Schwimmen_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Schwimmen_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Schwimmen" title="@{Grobmotorik_Schwimmen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Speerwerfen"><b>Speerwerfen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Speerwerfen_show" placeholder="Grobmotorik_Speerwerfen_show" title="@{Grobmotorik_Speerwerfen_show}" type="text" value="Grobmotorik_Speerwerfen_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Speerwerfen_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Speerwerfen" title="@{Grobmotorik_Speerwerfen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Turnen"><b>Turnen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Turnen_show" placeholder="Grobmotorik_Turnen_show" title="@{Grobmotorik_Turnen_show}" type="text" value="Grobmotorik_Turnen_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Turnen_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Turnen" title="@{Grobmotorik_Turnen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Unbewaffneter Kampf"><b>Unbewaffneter Kampf</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Unbewaffneter_Kampf_show" placeholder="Grobmotorik_Unbewaffneter Kampf_show" title="@{Grobmotorik_Unbewaffneter_Kampf_show}" type="text" value="Grobmotorik_Unbewaffneter Kampf_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Unbewaffneter_Kampf_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Unbewaffneter_Kampf" title="@{Grobmotorik_Unbewaffneter_Kampf}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Werfen"><b>Werfen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Grobmotorik_Werfen_show" placeholder="Grobmotorik_Werfen_show" title="@{Grobmotorik_Werfen_show}" type="text" value="Grobmotorik_Werfen_calc" disabled="disabled"/>
+                <input name="attr_Grobmotorik_Werfen_calc" type="hidden"/>
+                <input name="attr_Grobmotorik_Werfen" title="@{Grobmotorik_Werfen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
             </div>
-          </fieldset>
+            <div name="Feinmotorik"> 
+              <h3>Feinmotorik</h3>
+              <div name="Artillerie"><b>Artillerie</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Feinmotorik_Artillerie_show" placeholder="Feinmotorik_Artillerie_show" title="@{Feinmotorik_Artillerie_show}" type="text" value="Feinmotorik_Artillerie_calc" disabled="disabled"/>
+                <input name="attr_Feinmotorik_Artillerie_calc" type="hidden"/>
+                <input name="attr_Feinmotorik_Artillerie" title="@{Feinmotorik_Artillerie}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Erste Hilfe"><b>Erste Hilfe</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Feinmotorik_Erste_Hilfe_show" placeholder="Feinmotorik_Erste Hilfe_show" title="@{Feinmotorik_Erste_Hilfe_show}" type="text" value="Feinmotorik_Erste Hilfe_calc" disabled="disabled"/>
+                <input name="attr_Feinmotorik_Erste_Hilfe_calc" type="hidden"/>
+                <input name="attr_Feinmotorik_Erste_Hilfe" title="@{Feinmotorik_Erste_Hilfe}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Gießen"><b>Gießen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Feinmotorik_Gießen_show" placeholder="Feinmotorik_Gießen_show" title="@{Feinmotorik_Gießen_show}" type="text" value="Feinmotorik_Gießen_calc" disabled="disabled"/>
+                <input name="attr_Feinmotorik_Gießen_calc" type="hidden"/>
+                <input name="attr_Feinmotorik_Gießen" title="@{Feinmotorik_Gießen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Handgeführte Werkzeuge"><b>Handgeführte Werkzeuge</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Feinmotorik_Handgeführte_Werkzeuge_show" placeholder="Feinmotorik_Handgeführte Werkzeuge_show" title="@{Feinmotorik_Handgeführte_Werkzeuge_show}" type="text" value="Feinmotorik_Handgeführte Werkzeuge_calc" disabled="disabled"/>
+                <input name="attr_Feinmotorik_Handgeführte_Werkzeuge_calc" type="hidden"/>
+                <input name="attr_Feinmotorik_Handgeführte_Werkzeuge" title="@{Feinmotorik_Handgeführte_Werkzeuge}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Handgeführte Maschinen"><b>Handgeführte Maschinen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Feinmotorik_Handgeführte_Maschinen_show" placeholder="Feinmotorik_Handgeführte Maschinen_show" title="@{Feinmotorik_Handgeführte_Maschinen_show}" type="text" value="Feinmotorik_Handgeführte Maschinen_calc" disabled="disabled"/>
+                <input name="attr_Feinmotorik_Handgeführte_Maschinen_calc" type="hidden"/>
+                <input name="attr_Feinmotorik_Handgeführte_Maschinen" title="@{Feinmotorik_Handgeführte_Maschinen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Löten &amp; Schweißen"><b>Löten &amp; Schweißen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Feinmotorik_Löten_&amp;_Schweißen_show" placeholder="Feinmotorik_Löten &amp; Schweißen_show" title="@{Feinmotorik_Löten_&amp;_Schweißen_show}" type="text" value="Feinmotorik_Löten &amp; Schweißen_calc" disabled="disabled"/>
+                <input name="attr_Feinmotorik_Löten_&amp;_Schweißen_calc" type="hidden"/>
+                <input name="attr_Feinmotorik_Löten_&amp;_Schweißen" title="@{Feinmotorik_Löten_&amp;_Schweißen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Schusswaffen"><b>Schusswaffen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Feinmotorik_Schusswaffen_show" placeholder="Feinmotorik_Schusswaffen_show" title="@{Feinmotorik_Schusswaffen_show}" type="text" value="Feinmotorik_Schusswaffen_calc" disabled="disabled"/>
+                <input name="attr_Feinmotorik_Schusswaffen_calc" type="hidden"/>
+                <input name="attr_Feinmotorik_Schusswaffen" title="@{Feinmotorik_Schusswaffen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Manuelle Maschinen"><b>Manuelle Maschinen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Feinmotorik_Manuelle_Maschinen_show" placeholder="Feinmotorik_Manuelle Maschinen_show" title="@{Feinmotorik_Manuelle_Maschinen_show}" type="text" value="Feinmotorik_Manuelle Maschinen_calc" disabled="disabled"/>
+                <input name="attr_Feinmotorik_Manuelle_Maschinen_calc" type="hidden"/>
+                <input name="attr_Feinmotorik_Manuelle_Maschinen" title="@{Feinmotorik_Manuelle_Maschinen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+            </div>
+            <div name="Geistig"> 
+              <h3>Geistig</h3>
+              <div name="Biologie"><b>Biologie</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Biologie_show" placeholder="Geistig_Biologie_show" title="@{Geistig_Biologie_show}" type="text" value="Geistig_Biologie_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Biologie_calc" type="hidden"/>
+                <input name="attr_Geistig_Biologie" title="@{Geistig_Biologie}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Chemie"><b>Chemie</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Chemie_show" placeholder="Geistig_Chemie_show" title="@{Geistig_Chemie_show}" type="text" value="Geistig_Chemie_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Chemie_calc" type="hidden"/>
+                <input name="attr_Geistig_Chemie" title="@{Geistig_Chemie}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Physik"><b>Physik</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Physik_show" placeholder="Geistig_Physik_show" title="@{Geistig_Physik_show}" type="text" value="Geistig_Physik_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Physik_calc" type="hidden"/>
+                <input name="attr_Geistig_Physik" title="@{Geistig_Physik}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Psychologie"><b>Psychologie</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Psychologie_show" placeholder="Geistig_Psychologie_show" title="@{Geistig_Psychologie_show}" type="text" value="Geistig_Psychologie_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Psychologie_calc" type="hidden"/>
+                <input name="attr_Geistig_Psychologie" title="@{Geistig_Psychologie}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Gedächtnis"><b>Gedächtnis</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Gedächtnis_show" placeholder="Geistig_Gedächtnis_show" title="@{Geistig_Gedächtnis_show}" type="text" value="Geistig_Gedächtnis_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Gedächtnis_calc" type="hidden"/>
+                <input name="attr_Geistig_Gedächtnis" title="@{Geistig_Gedächtnis}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Geschichte"><b>Geschichte</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Geschichte_show" placeholder="Geistig_Geschichte_show" title="@{Geistig_Geschichte_show}" type="text" value="Geistig_Geschichte_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Geschichte_calc" type="hidden"/>
+                <input name="attr_Geistig_Geschichte" title="@{Geistig_Geschichte}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Materialkunden"><b>Materialkunden</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Materialkunden_show" placeholder="Geistig_Materialkunden_show" title="@{Geistig_Materialkunden_show}" type="text" value="Geistig_Materialkunden_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Materialkunden_calc" type="hidden"/>
+                <input name="attr_Geistig_Materialkunden" title="@{Geistig_Materialkunden}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Rechnen"><b>Rechnen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Rechnen_show" placeholder="Geistig_Rechnen_show" title="@{Geistig_Rechnen_show}" type="text" value="Geistig_Rechnen_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Rechnen_calc" type="hidden"/>
+                <input name="attr_Geistig_Rechnen" title="@{Geistig_Rechnen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Schrift"><b>Schrift</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Schrift_show" placeholder="Geistig_Schrift_show" title="@{Geistig_Schrift_show}" type="text" value="Geistig_Schrift_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Schrift_calc" type="hidden"/>
+                <input name="attr_Geistig_Schrift" title="@{Geistig_Schrift}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Selbstbeherrschung"><b>Selbstbeherrschung</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Selbstbeherrschung_show" placeholder="Geistig_Selbstbeherrschung_show" title="@{Geistig_Selbstbeherrschung_show}" type="text" value="Geistig_Selbstbeherrschung_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Selbstbeherrschung_calc" type="hidden"/>
+                <input name="attr_Geistig_Selbstbeherrschung" title="@{Geistig_Selbstbeherrschung}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Sprache"><b>Sprache</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Sprache_show" placeholder="Geistig_Sprache_show" title="@{Geistig_Sprache_show}" type="text" value="Geistig_Sprache_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Sprache_calc" type="hidden"/>
+                <input name="attr_Geistig_Sprache" title="@{Geistig_Sprache}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Technologie"><b>Technologie</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Technologie_show" placeholder="Geistig_Technologie_show" title="@{Geistig_Technologie_show}" type="text" value="Geistig_Technologie_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Technologie_calc" type="hidden"/>
+                <input name="attr_Geistig_Technologie" title="@{Geistig_Technologie}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Wahrnehmung"><b>Wahrnehmung</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Geistig_Wahrnehmung_show" placeholder="Geistig_Wahrnehmung_show" title="@{Geistig_Wahrnehmung_show}" type="text" value="Geistig_Wahrnehmung_calc" disabled="disabled"/>
+                <input name="attr_Geistig_Wahrnehmung_calc" type="hidden"/>
+                <input name="attr_Geistig_Wahrnehmung" title="@{Geistig_Wahrnehmung}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+            </div>
+            <div name="Sozial"> 
+              <h3>Sozial</h3>
+              <div name="Auftreten"><b>Auftreten</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Sozial_Auftreten_show" placeholder="Sozial_Auftreten_show" title="@{Sozial_Auftreten_show}" type="text" value="Sozial_Auftreten_calc" disabled="disabled"/>
+                <input name="attr_Sozial_Auftreten_calc" type="hidden"/>
+                <input name="attr_Sozial_Auftreten" title="@{Sozial_Auftreten}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Durchschauen"><b>Durchschauen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Sozial_Durchschauen_show" placeholder="Sozial_Durchschauen_show" title="@{Sozial_Durchschauen_show}" type="text" value="Sozial_Durchschauen_calc" disabled="disabled"/>
+                <input name="attr_Sozial_Durchschauen_calc" type="hidden"/>
+                <input name="attr_Sozial_Durchschauen" title="@{Sozial_Durchschauen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Normen"><b>Normen</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Sozial_Normen_show" placeholder="Sozial_Normen_show" title="@{Sozial_Normen_show}" type="text" value="Sozial_Normen_calc" disabled="disabled"/>
+                <input name="attr_Sozial_Normen_calc" type="hidden"/>
+                <input name="attr_Sozial_Normen" title="@{Sozial_Normen}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+              <div name="Redekunst"><b>Redekunst</b>
+                <p>ALLE Spezialisierungen </p>
+                <input name="attr_Sozial_Redekunst_show" placeholder="Sozial_Redekunst_show" title="@{Sozial_Redekunst_show}" type="text" value="Sozial_Redekunst_calc" disabled="disabled"/>
+                <input name="attr_Sozial_Redekunst_calc" type="hidden"/>
+                <input name="attr_Sozial_Redekunst" title="@{Sozial_Redekunst}" type="number" value="0" step="1" pattern="^[0-9]"/>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="res"> 
