@@ -898,7 +898,7 @@ on('change:repeating_ressources:type change:repeating_ressources:wert', async (i
     setAttrsAsync(fill)
 });
 
-on('sheet:opened change:repeating_wunden:stufe change:repeating_wunden:zone remove:repeating_wunden', async (info) => {
+on('sheet:opened change:repeating_wunden:stufe change:repeating_wunden:zone remove:repeating_wunden change:MuK change:AuD change:GeH change:RaT change:KrT change:WiK', async (info) => {
 
     var allBaseAttributes = getAttrsAsync(raspa_attributes);
     var allEntryIDs = await getSectionIDsAsync(["repeating_wunden"]);
