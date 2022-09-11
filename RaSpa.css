@@ -35,6 +35,10 @@
   flex-direction: row;
   padding: 15px;
 }
+.values div {
+  width: 115px;
+  margin-right: 10px;
+}
 .rolls {
   padding: 15px;
   display: block;

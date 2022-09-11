@@ -31,24 +31,42 @@
   <label for="Attribute">Attribute</label>
   <div class="tab">
     <div class="values">
-      <div class="name"></div>
-      <button class="text-capitalize" name="roll_AuD" type="roll" value="&{template:default} {{Attribut: AuD}} {{Qualität: [[[[@{AuD}]] + [[1d8<@{AuD}f8-1]]]] }} {{Wurf: $[[1]]}} }}">AuD</button>
-      <input name="attr_AuD" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <div class="name"></div>
-      <button class="text-capitalize" name="roll_GeH" type="roll" value="&{template:default} {{Attribut: GeH}} {{Qualität: [[[[@{GeH}]] + [[1d8<@{GeH}f8-1]]]] }} {{Wurf: $[[1]]}} }}">GeH</button>
-      <input name="attr_GeH" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <div class="name"></div>
-      <button class="text-capitalize" name="roll_MuK" type="roll" value="&{template:default} {{Attribut: MuK}} {{Qualität: [[[[@{MuK}]] + [[1d8<@{MuK}f8-1]]]] }} {{Wurf: $[[1]]}} }}">MuK</button>
-      <input name="attr_MuK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <div class="name"></div>
-      <button class="text-capitalize" name="roll_RaT" type="roll" value="&{template:default} {{Attribut: RaT}} {{Qualität: [[[[@{RaT}]] + [[1d8<@{RaT}f8-1]]]] }} {{Wurf: $[[1]]}} }}">RaT</button>
-      <input name="attr_RaT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <div class="name"></div>
-      <button class="text-capitalize" name="roll_KrT" type="roll" value="&{template:default} {{Attribut: KrT}} {{Qualität: [[[[@{KrT}]] + [[1d8<@{KrT}f8-1]]]] }} {{Wurf: $[[1]]}} }}">KrT</button>
-      <input name="attr_KrT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
-      <div class="name"></div>
-      <button class="text-capitalize" name="roll_WiK" type="roll" value="&{template:default} {{Attribut: WiK}} {{Qualität: [[[[@{WiK}]] + [[1d8<@{WiK}f8-1]]]] }} {{Wurf: $[[1]]}} }}">WiK</button>
-      <input name="attr_WiK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+      <div name="AuD">
+        <button class="text-capitalize" name="roll_AuD" type="roll" value="&{template:default} {{Attribut: AuD}} {{Qualität: [[[[@{AuD_calc}]] + [[1d8<@{AuD_calc}f8-1]]]] }} {{Wurf: $[[1]]}} }}">AuD</button>
+        <input name="attr_AuD" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <input name="attr_AuD_display" type="number" disabled="disabled" value="@{AuD_calc}" style="width: 100%"/>
+        <input name="attr_AuD_calc" type="hidden" value="0"/>
+      </div>
+      <div name="GeH">
+        <button class="text-capitalize" name="roll_GeH" type="roll" value="&{template:default} {{Attribut: GeH}} {{Qualität: [[[[@{GeH_calc}]] + [[1d8<@{GeH_calc}f8-1]]]] }} {{Wurf: $[[1]]}} }}">GeH</button>
+        <input name="attr_GeH" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <input name="attr_GeH_display" type="number" disabled="disabled" value="@{GeH_calc}" style="width: 100%"/>
+        <input name="attr_GeH_calc" type="hidden" value="0"/>
+      </div>
+      <div name="MuK">
+        <button class="text-capitalize" name="roll_MuK" type="roll" value="&{template:default} {{Attribut: MuK}} {{Qualität: [[[[@{MuK_calc}]] + [[1d8<@{MuK_calc}f8-1]]]] }} {{Wurf: $[[1]]}} }}">MuK</button>
+        <input name="attr_MuK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <input name="attr_MuK_display" type="number" disabled="disabled" value="@{MuK_calc}" style="width: 100%"/>
+        <input name="attr_MuK_calc" type="hidden" value="0"/>
+      </div>
+      <div name="RaT">
+        <button class="text-capitalize" name="roll_RaT" type="roll" value="&{template:default} {{Attribut: RaT}} {{Qualität: [[[[@{RaT_calc}]] + [[1d8<@{RaT_calc}f8-1]]]] }} {{Wurf: $[[1]]}} }}">RaT</button>
+        <input name="attr_RaT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <input name="attr_RaT_display" type="number" disabled="disabled" value="@{RaT_calc}" style="width: 100%"/>
+        <input name="attr_RaT_calc" type="hidden" value="0"/>
+      </div>
+      <div name="KrT">
+        <button class="text-capitalize" name="roll_KrT" type="roll" value="&{template:default} {{Attribut: KrT}} {{Qualität: [[[[@{KrT_calc}]] + [[1d8<@{KrT_calc}f8-1]]]] }} {{Wurf: $[[1]]}} }}">KrT</button>
+        <input name="attr_KrT" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <input name="attr_KrT_display" type="number" disabled="disabled" value="@{KrT_calc}" style="width: 100%"/>
+        <input name="attr_KrT_calc" type="hidden" value="0"/>
+      </div>
+      <div name="WiK">
+        <button class="text-capitalize" name="roll_WiK" type="roll" value="&{template:default} {{Attribut: WiK}} {{Qualität: [[[[@{WiK_calc}]] + [[1d8<@{WiK_calc}f8-1]]]] }} {{Wurf: $[[1]]}} }}">WiK</button>
+        <input name="attr_WiK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
+        <input name="attr_WiK_display" type="number" disabled="disabled" value="@{WiK_calc}" style="width: 100%"/>
+        <input name="attr_WiK_calc" type="hidden" value="0"/>
+      </div>
     </div>
     <div class="rolls"> 
       <div class="ability">
@@ -116,6 +134,22 @@
         <input name="attr_roll_WiK" id="roll_WiK" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
         <button class="text-capitalize" name="act_probe" type="action">probe</button>
       </div>
+    </div>
+    <div class="body-wounds"> 
+      <h4>Wunden </h4>
+      <fieldset class="repeating_Wunden">
+        <div class="rowx grid descriptor">
+          <select name="attr_Zone">
+            <option value="[&quot;RaT&quot;,&quot;KrT&quot;,&quot;WiK&quot;]">Kopf</option>
+            <option value="[&quot;AuD&quot;,&quot;GeH&quot;,&quot;MuK&quot;]">Brust</option>
+            <option value="[&quot;AuD&quot;,&quot;WiK&quot;]">Bauch</option>
+            <option value="[&quot;MuK&quot;,&quot;GeH&quot;]">Arme</option>
+            <option value="[&quot;MuK&quot;,&quot;GeH&quot;]">Beine</option>
+          </select>
+          <input name="attr_Subzone" placeholder="Subzone" title="@{Subzone}" type="text" value=""/>
+          <input name="attr_Stufe" title="@{Stufe}" type="number" value="0" step="1" pattern="^[0-9]"/>
+        </div>
+      </fieldset>
     </div>
   </div>
   <input name="attr_defaultTab" id="Eigenschaften" type="radio"/>
@@ -724,6 +758,8 @@ function getSingleAttrAsync(prop){
 }
   const raspa_abilities = {'Balancieren': {attributes: ['MuK', 'WiK']}, 'Bewaffneter Kampf': {attributes: ['MuK', 'WiK']}, 'Bogenschießen': {attributes: ['MuK', 'RaT']}, 'Fliegen': {attributes: ['MuK', 'AuD']}, 'Leichtathletik': {attributes: ['MuK', 'WiK']}, 'Messerwerfen': {attributes: ['MuK', 'RaT']}, 'Schleudern': {attributes: ['MuK', 'RaT']}, 'Schwerathletik': {attributes: ['MuK', 'RaT']}, 'Schwimmen': {attributes: ['MuK', 'AuD']}, 'Speerwerfen': {attributes: ['MuK', 'RaT']}, 'Turnen': {attributes: ['MuK', 'GeH']}, 'Unbewaffneter Kampf': {attributes: ['MuK', 'GeH']}, 'Werfen': {attributes: ['MuK', 'RaT']}, 'Artillerie': {attributes: ['RaT', 'WiK']}, 'Erste Hilfe': {attributes: ['RaT', 'WiK']}, 'Gießen': {attributes: ['RaT', 'KrT']}, 'Handgeführte Werkzeuge': {attributes: ['AuD', 'MuK']}, 'Handgeführte Maschinen': {attributes: ['AuD', 'MuK']}, 'Löten & Schweißen': {attributes: ['RaT', 'WiK']}, 'Schusswaffen': {attributes: ['MuK', 'WiK']}, 'Manuelle Maschinen': {attributes: ['RaT', 'KrT']}, 'Biologie': {attributes: ['RaT', 'KrT']}, 'Chemie': {attributes: ['RaT', 'KrT']}, 'Physik': {attributes: ['RaT', 'KrT']}, 'Psychologie': {attributes: ['KrT', 'WiK']}, 'Gedächtnis': {attributes: ['RaT', 'KrT']}, 'Geschichte': {attributes: ['RaT', 'KrT']}, 'Materialkunden': {attributes: ['RaT', 'WiK']}, 'Rechnen': {attributes: ['RaT', 'KrT']}, 'Schrift': {attributes: ['RaT', 'KrT']}, 'Selbstbeherrschung': {attributes: ['AuD', 'WiK']}, 'Sprache': {attributes: ['RaT', 'KrT']}, 'Technologie': {attributes: ['RaT', 'KrT']}, 'Wahrnehmung': {attributes: ['RaT', 'KrT']}, 'Auftreten': {attributes: ['KrT', 'WiK']}, 'Durchschauen': {attributes: ['RaT', 'KrT']}, 'Normen': {attributes: ['RaT', 'KrT']}, 'Redekunst': {attributes: ['RaT', 'KrT']}};
 
+const raspa_attributes = ["AuD","GeH","MuK","RaT","KrT","WiK"]
+
 on('clicked:probe', (info) => {
     groupRoll(['AuD', 'GeH', 'MuK', 'RaT', 'KrT', 'WiK']);
 });
@@ -741,16 +777,16 @@ on('change:probeability', async (info) => {
 
 });
 
-on('sheet:open change:repeating_ausrüstung:gewicht change:repeating_ausrüstung:istangelegt change:repeating_ausrüstung:istrucksack remove:repeating_ausrüstung add:repeating_ausrüstung', async (info) => {
+on('sheet:opened change:repeating_ausrüstung:gewicht change:repeating_ausrüstung:istangelegt change:repeating_ausrüstung:istrucksack remove:repeating_ausrüstung add:repeating_ausrüstung', async (info) => {
     
     
     var allEntryIDs = await getSectionIDsAsync(["repeating_ausrüstung"]);
     var allEntrys = [];
     var gesamtGewicht = 0;
     for(entryID of allEntryIDs){
-        allEntrys.push("repeating_ausrüstung_"+entryID+"_istangelegt");
-        allEntrys.push("repeating_ausrüstung_"+entryID+"_Gewicht");
-        allEntrys.push("repeating_ausrüstung_"+entryID+"_istrucksack");
+        allEntrys.push("repeating_ausrüstung" + "_" + entryID + "_" + "istangelegt");
+        allEntrys.push("repeating_ausrüstung" + "_" + entryID + "_" + "Gewicht");
+        allEntrys.push("repeating_ausrüstung" + "_" + entryID + "_" + "istrucksack");
     }
     console.log(allEntrys);
     var allValidEntrys = await getAttrsAsync(allEntrys);
@@ -861,6 +897,54 @@ on('change:repeating_ressources:type change:repeating_ressources:wert', async (i
     console.log(variableName);
     setAttrsAsync(fill)
 });
+
+on('sheet:opened change:repeating_wunden:stufe change:repeating_wunden:zone remove:repeating_wunden', async (info) => {
+
+    var allBaseAttributes = getAttrsAsync(raspa_attributes);
+    var allEntryIDs = await getSectionIDsAsync(["repeating_wunden"]);
+    var allEntrys = [];
+    var allNewValues = {};
+
+    for(entryID of allEntryIDs){
+        allEntrys.push("repeating_wunden" + "_" + entryID + "_" + "stufe");
+        allEntrys.push("repeating_wunden" + "_" + entryID + "_" + "zone");
+    }
+    console.log(allEntrys);
+    var allValidEntrys = getAttrsAsync(allEntrys);
+    var results = await Promise.all([allBaseAttributes, allValidEntrys]);
+    console.log(allValidEntrys);
+    console.log(results);
+    allBaseAttributes = results[0];
+    allValidEntrys = results[1];
+    console.log(allValidEntrys);
+    console.log(allBaseAttributes);
+
+    // populate calc array (Every probe runs from this so if there is no shift we need a base value != NaN)
+    for(attribute of raspa_attributes){
+        allNewValues[attribute+"_calc"] = parseInt(allBaseAttributes[attribute]);
+    }
+
+    //
+    for(entryID of allEntryIDs){
+        let entry = `repeating_wunden_${entryID}_`;
+        let stufe = allValidEntrys[entry+"stufe"];
+        let zones = eval(allValidEntrys[entry+"zone"]); //DANGER
+        for(zone of zones){
+            // Wenn ein Attribut bereits verändert wurde, arbeite mit der Veränderung weiter, ansonsten nutze das Basisattribut
+            let oldValue = allNewValues[zone+"_calc"];
+            let newValue = oldValue - (stufe / 4);
+            allNewValues[zone+"_calc"]=newValue;
+        } 
+    
+    }
+    // Round at the end ?!
+    for (key in allNewValues){
+        allNewValues[key]=Math.round(Math.max(allNewValues[key],0));
+    }
+    console.log(allNewValues);
+    setAttrsAsync(allNewValues);
+});
+  
 async function groupRoll(group_) {
     const rollHeader = "&{template:test}";
     var rollString = "";
@@ -873,7 +957,7 @@ async function groupRoll(group_) {
         var attrCountName = Object.keys(attributeRollcounts)[index];
         var attrCount =attributeRollcounts[attrCountName];
         if (attrCount > 0) {
-            rollString += ` {{${attrName}=[[@{${attrCountName}}d8<@{${attrName}}f8-@{${attrCountName}}]]}}`;
+            rollString += ` {{${attrName}=[[@{${attrCountName}}d8<@{${attrName}_calc}f8-@{${attrCountName}}]]}}`;
         } 
     }
     rollString += ` {{qualität=[[0]]}}`;

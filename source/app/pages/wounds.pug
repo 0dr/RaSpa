@@ -1,0 +1,7 @@
+.body-wounds 
+    h4 Wunden 
+    fieldset(class=`repeating_${buttonName("Wunden")}`)
+        .rowx.grid.descriptor
+                +dropDown("Zone", raspa_zones)
+                +textInput(`Subzone`)
+                +numberInput('Stufe')

@@ -21,9 +21,11 @@ mixin numberInputLabeled(name)
         input(name=`attr_${attrName(name)}` title=`@{${attrName(name)}}` type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]' )&attributes(attributes)
 
 mixin numberInputRollable(name)
-    .name
-    +rollButton(name)
-    input(name=`attr_${attrName(name)}`  type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]')
+    div(name=name)
+        +rollButton(name)
+        input(name=`attr_${attrName(name)}`  type='number' value='0' min='0' max='99' step='1' pattern='^[0-9]')   
+        input(name=`attr_${attrName(name)}_display`  type='number' disabled value=`@\{${attrName(name)}_calc\}`)(style=`width: 100%`)
+        input(name=`attr_${attrName(name)}_calc`  type='hidden' value=0)
 
 
 mixin checkboxInput(name)
@@ -45,7 +47,7 @@ mixin rollButtonDefault(name)
     button.text-capitalize(name=`roll_${buttonName(name)}` type='roll' value!=`&{template:rolls} {{header=${name}}} {{dice=[[1d8]]}}`)
 
 mixin rollButton(name)
-    button.text-capitalize(name=`roll_${buttonName(name)}` type='roll' value!=`&{template:default} {{Attribut: ${name}}} {{Qualität: [[[[@{${attrName(name)}}]] + [[1d8<@{${attrName(name)}}f8-1]]]] }} {{Wurf: $[[1]]}} }}`)=name
+    button.text-capitalize(name=`roll_${buttonName(name)}` type='roll' value!=`&{template:default} {{Attribut: ${name}}} {{Qualität: [[[[@{${attrName(name)}_calc}]] + [[1d8<@{${attrName(name)}_calc}f8-1]]]] }} {{Wurf: $[[1]]}} }}`)=name
 
 mixin actionButton(name)
     button.text-capitalize(name=`act_${buttonName(name)}` type='action')=name

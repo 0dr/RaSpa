@@ -11,7 +11,7 @@ async function groupRoll(group_) {
         var attrCountName = Object.keys(attributeRollcounts)[index];
         var attrCount =attributeRollcounts[attrCountName];
         if (attrCount > 0) {
-            rollString += ` {{${attrName}=[[@{${attrCountName}}d8<@{${attrName}}f8-@{${attrCountName}}]]}}`;
+            rollString += ` {{${attrName}=[[@{${attrCountName}}d8<@{${attrName}_calc}f8-@{${attrCountName}}]]}}`;
         } 
     }
     rollString += ` {{qualität=[[0]]}}`;
