@@ -308,8 +308,8 @@
       <div class="mop"> 
         <h4>Motivationspunkte</h4>
         <div class="header">
-          <label title="enter Startalter">Startalter
-            <input name="attr_Startalter" title="@{Startalter}" type="number" value="16" min="0" max="99" step="1" pattern="^[0-9]"/>
+          <label title="enter Jahre nach Start">Jahre nach Start
+            <input name="attr_Jahre_nach_Start" title="@{Jahre_nach_Start}" type="number" value="0" min="0" max="99" step="1" pattern="^[0-9]"/>
           </label>
           <label title="enter MoP">MoP
             <input name="attr_MoP" title="@{MoP}" type="number" value="@{MoP_calc}" min="0" max="99" step="1" pattern="^[0-9]" disabled="disabled"/>
@@ -971,5 +971,25 @@ async function groupRoll(group_) {
 }
 
 
+  
+on('change:Jahre_nach_Start', async (info) => {
+    
+    var mop = 0;
+    const ageThreshold = 35;
+    const ageStart = 16;
+    const ageSvell = ageThreshold - ageStart;
+    const startMoP = 832;
+    const baseMoP = 52;
+    var years = parseInt(info.newValue);
+
+    var yearsLate = (years > ageSvell) ? ((years - ageSvell)*(baseMoP/4)) : (0); 
+    var yearsMid = (years < ageSvell) ? (years * (baseMoP/2)) : (ageSvell*(baseMoP/4));
+    
+    mop = startMoP + yearsMid + yearsLate;
+    console.log([mop,ageSvell,yearsLate,yearsMid]);
+    
+
+    setAttrsAsync({"MoP_calc": mop});
+});
 
 </script>

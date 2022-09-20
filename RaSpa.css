@@ -86,6 +86,9 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
+.generator .mop .header input[type=number] {
+  width: auto;
+}
 .generator .res .header {
   display: flex;
   flex-wrap: wrap;

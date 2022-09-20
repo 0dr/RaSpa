@@ -8,10 +8,12 @@
             select(name=`attr_espSelect}`)
                 each entry in raspa_esp
                     option(value=entry.name)=entry.name 
+
+
     .mop 
         h4 Motivationspunkte
         .header
-            +numberInputLabeled("Startalter")(value="16")
+            +numberInputLabeled("Jahre nach Start")(value="0")
             +numberInputLabeled("MoP")(disabled value="@{MoP_calc}")
             +numberInputLabeled("Verbraucht")(disabled value="@{MoP_used}")
             +hiddenVar("MoP_calc")(value="0")
